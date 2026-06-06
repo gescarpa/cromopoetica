@@ -750,7 +750,84 @@ function Intro({ onStart, onStats, total }) {
           </p>
         </div>
       </div>
+
+      <InstallButtons />
     </main>
+  );
+}
+
+/* ---------- botones de instalación (PWA) ---------- */
+function InstallButtons() {
+  const [deferred, setDeferred] = useState(null);
+  const [installed, setInstalled] = useState(false);
+  const [modal, setModal] = useState(null); // 'ios' | 'android'
+
+  useEffect(() => {
+    const onBIP = (e) => { e.preventDefault(); setDeferred(e); };
+    const onInstalled = () => setInstalled(true);
+    window.addEventListener("beforeinstallprompt", onBIP);
+    window.addEventListener("appinstalled", onInstalled);
+    const standalone =
+      (window.matchMedia && window.matchMedia("(display-mode: standalone)").matches) ||
+      window.navigator.standalone === true;
+    if (standalone) setInstalled(true);
+    return () => {
+      window.removeEventListener("beforeinstallprompt", onBIP);
+      window.removeEventListener("appinstalled", onInstalled);
+    };
+  }, []);
+
+  if (installed) return null;
+
+  const onAndroid = async () => {
+    if (deferred) {
+      deferred.prompt();
+      try { await deferred.userChoice; } catch (e) { /* el usuario cerró */ }
+      setDeferred(null);
+    } else {
+      setModal("android");
+    }
+  };
+
+  const Device = ({ c }) => (
+    <svg width="14" height="18" viewBox="0 0 14 18" style={{ marginRight: 7, verticalAlign: "-3px" }}>
+      <rect x="0.6" y="0.6" width="12.8" height="16.8" rx="2.2" fill="none" stroke={c} strokeWidth="1.4" />
+      <rect x="5" y="13.6" width="4" height="1.6" rx="0.8" fill={c} />
+    </svg>
+  );
+
+  return (
+    <div style={{ marginTop: 18, border: `1px solid ${INK}`, background: PAPER, padding: "20px 22px", textAlign: "center" }}>
+      <div style={{ fontFamily: DISP, fontWeight: 900, fontSize: 18, textTransform: "uppercase", letterSpacing: ".06em", marginBottom: 12 }}>Descargar app</div>
+      <div style={{ display: "flex", gap: 10, justifyContent: "center", flexWrap: "wrap" }}>
+        <button onClick={onAndroid} style={BTN}><Device c={PAPER} />Android</button>
+        <button onClick={() => setModal("ios")} style={BTN_GHOST}><Device c={INK} />iPhone</button>
+      </div>
+      <div style={{ fontFamily: MONO, fontSize: 10, color: "#8a8266", marginTop: 12 }}>
+        es la misma web, instalada como app en tu pantalla de inicio
+      </div>
+      {modal && <InstallModal kind={modal} onClose={() => setModal(null)} />}
+    </div>
+  );
+}
+
+function InstallModal({ kind, onClose }) {
+  const steps = kind === "ios"
+    ? ["Abre esta página en Safari.", "Pulsa el botón Compartir (el cuadrado con una flecha hacia arriba).", "Desliza y elige «Añadir a pantalla de inicio».", "Pulsa «Añadir»: el icono aparece en tu pantalla."]
+    : ["Abre el menú de Chrome (los tres puntos ⋮).", "Pulsa «Instalar aplicación» o «Añadir a pantalla de inicio».", "Confirma: el icono aparece en tu pantalla de inicio."];
+  return (
+    <div onClick={onClose} style={{ position: "fixed", inset: 0, background: "rgba(23,21,15,.55)", display: "flex", alignItems: "center", justifyContent: "center", padding: 20, zIndex: 50 }}>
+      <div onClick={(e) => e.stopPropagation()} style={{ maxWidth: 380, width: "100%", background: PAPER, border: `2px solid ${INK}`, padding: "22px 22px 24px" }}>
+        <div style={{ fontFamily: DISP, fontWeight: 900, fontSize: 18, textTransform: "uppercase", letterSpacing: ".04em", marginBottom: 4 }}>
+          Instalar en {kind === "ios" ? "iPhone" : "Android"}
+        </div>
+        <div style={{ fontFamily: MONO, fontSize: 11, color: "#6b6450", marginBottom: 14 }}>añadir a la pantalla de inicio</div>
+        <ol style={{ margin: 0, paddingLeft: 18, fontSize: 14.5, lineHeight: 1.5 }}>
+          {steps.map((s, i) => <li key={i} style={{ marginBottom: 8 }}>{s}</li>)}
+        </ol>
+        <button onClick={onClose} style={{ ...BTN, marginTop: 18, width: "100%" }}>Entendido</button>
+      </div>
+    </div>
   );
 }
 
