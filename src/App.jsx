@@ -444,7 +444,7 @@ const BTN = {
 const BTN_GHOST = { ...BTN, background: "transparent", color: INK };
 
 /* batch sizes: 3, 5, luego 10 indefinidamente */
-const batchSize = (i) => (i === 0 ? 3 : i === 1 ? 5 : 10);
+const batchSize = () => 3;
 function batchInfo(total) {
   let i = 0, before = 0;
   while (before + batchSize(i) <= total) { before += batchSize(i); i++; }
@@ -690,7 +690,7 @@ function Intro({ onStart, onStats, total }) {
             En la pantalla, todo color nace de tres luces: <b style={{ color: RED }}>rojo</b>, <b style={{ color: GRN }}>verde</b> y <b style={{ color: BLUE }}>azul</b>. Súmalas al máximo y obtienes blanco: toda la luz. El proyecto <b>Cromopoética</b> traslada esa síntesis al análisis de la obra de los poetas.
           </p>
           <p style={{ fontSize: 16, lineHeight: 1.55, maxWidth: 520, margin: "0 0 22px" }}>
-            A cada poeta le asignas tres valores de 0 a 255 y un cuarto de opacidad. El resultado es un color exacto —su ficha de catálogo—. Tras cada tanda, leemos la gama: qué poéticas son hermanas, cuáles se oponen, qué retrato componen juntas.
+            A cada poeta le asignas tres valores de 0 a 255 y un cuarto de opacidad. El resultado es un color exacto —su ficha de catálogo—. Votarás los poetas de tres en tres: con cada terna haremos un comentario sobre sus similitudes y diferencias, tanto cromáticas como poéticas.
           </p>
           <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
             <button onClick={onStart} style={BTN}>Empezar a votar</button>
