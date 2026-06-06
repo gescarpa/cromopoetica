@@ -207,4 +207,72 @@ export const BIOS = {
     bio: "Olga Orozco (1920-1999) es una de las voces mayores de la poesía argentina del siglo XX, vinculada a la sensibilidad surrealista. Su obra despliega un mundo de gran densidad simbólica, poblado de presencias, rituales, memoria e infancia, con un tono solemne y visionario. La muerte, lo sagrado y lo oculto recorren sus poemas, escritos en un lenguaje suntuoso y musical. Trabajó también en el periodismo bajo diversos seudónimos. Reconocida con importantes premios, su poesía mantiene una atmósfera única, entre el conjuro y la elegía.",
     obras: ["Los juegos peligrosos", "Museo salvaje", "Con esta boca, en este mundo"],
   },
+  "virgilio": {
+    bio: "Virgilio (70-19 a.C.) es el mayor poeta de la Roma antigua y una de las figuras centrales de toda la literatura occidental. Bajo el mecenazgo de Mecenas y el emperador Augusto, compuso una obra que se convirtió en modelo clásico durante siglos. Su «Eneida», epopeya sobre el origen mítico de Roma a través del héroe Eneas, dialoga con Homero y fija el ideal del poema nacional. Antes había cultivado la poesía pastoril y la didáctica del campo. Su prestigio fue tal que la Edad Media lo veneró casi como a un sabio profético; Dante lo eligió como guía en la «Comedia».",
+    obras: ["Eneida", "Geórgicas", "Bucólicas"],
+  },
+  "horacio": {
+    bio: "Horacio (65-8 a.C.) es, junto a Virgilio, el gran poeta del Siglo de Oro latino. Hijo de un liberto, se integró en el círculo de Mecenas y cultivó una poesía de equilibrio, mesura y perfección formal. Sus «Odas» adaptaron al latín los metros de la lírica griega, y de su obra proceden fórmulas que aún usamos, como «carpe diem» o «aurea mediocritas». En su «Arte poética» legó a la posteridad una influyente reflexión sobre el oficio de escribir. Su ideal de serenidad y vida retirada inspiró a poetas de todas las épocas, entre ellos Fray Luis de León.",
+    obras: ["Odas", "Sátiras", "Arte poética"],
+  },
+  "ovidio": {
+    bio: "Ovidio (43 a.C.-17 d.C.) fue uno de los poetas latinos más brillantes e ingeniosos, maestro de la poesía amorosa y mitológica. Su obra mayor, las «Metamorfosis», es un vasto poema que recorre la mitología clásica bajo el hilo conductor de las transformaciones, y se convirtió en fuente inagotable para el arte y la literatura posteriores. Cultivó también la poesía erótica y didáctica del amor. En la cumbre de su fama, el emperador Augusto lo desterró a orillas del mar Negro por razones nunca aclaradas del todo, y allí escribió elegías del exilio.",
+    obras: ["Metamorfosis", "Arte de amar", "Tristes"],
+  },
+  "catulo": {
+    bio: "Catulo (84-54 a.C.) es el gran poeta lírico de la Roma tardorrepublicana y una voz de sorprendente modernidad. Perteneció a los «poetae novi», que renovaron la poesía latina inspirándose en los modelos helenísticos y privilegiando lo personal y refinado frente a la épica. Es célebre por sus apasionados y atormentados poemas a la mujer que llamó Lesbia, donde el amor y el odio se entrelazan con una intensidad inédita. Cultivó también el epigrama mordaz y la invectiva. Su franqueza emocional lo acerca al lector contemporáneo como pocos antiguos.",
+    obras: ["Carmina (Poemas)"],
+  },
+  "wang-wei": {
+    bio: "Wang Wei (699-759) fue un poeta, pintor y músico de la dinastía Tang, y una de las grandes voces de la poesía china clásica junto a Li Bai y Du Fu. Funcionario y budista devoto, su poesía está impregnada de serenidad contemplativa y de una honda comunión con el paisaje. Se le considera maestro del poema breve de naturaleza, donde una escena aparentemente sencilla encierra una resonancia espiritual. La tradición resumió su arte diciendo que en su poesía hay pintura y en su pintura, poesía. Su influencia en la estética oriental es duradera.",
+    obras: ["Poemas del río Wang", "Cervatal"],
+  },
+  "li-qingzhao": {
+    bio: "Li Qingzhao (1084-1155) está considerada la mayor poeta de la historia de China y una maestra del género «ci», poesía escrita para ser cantada. Su obra temprana evoca una vida culta y feliz junto a su esposo, con quien compartía la pasión por el coleccionismo de arte y la erudición. La invasión yurchen y la muerte de su marido la sumieron en el desarraigo y la pérdida, que tiñen de melancolía su poesía madura. De tono intimista y musical, su voz femenina es excepcional en la tradición. Gran parte de su obra se ha perdido.",
+    obras: ["Colección de poemas ci", "Ensayo sobre el ci"],
+  },
+  "hafez": {
+    bio: "Hafez (1325-1390) es el poeta más amado de Persia y una cima de la lírica en lengua persa. Maestro del «gazal», breve poema de amor y vino, fundió en su obra el lenguaje del deseo terrenal con la mística sufí, en una ambigüedad deliberada y embriagadora. Su «Diván» es leído en el mundo persa casi como un oráculo: aún hoy se abre al azar para buscar consejo. Celebró el amor, la belleza y el éxtasis frente a la hipocresía de los poderosos. Su influencia llega hasta poetas occidentales como Goethe, que le rindió homenaje.",
+    obras: ["Diván"],
+  },
+  "kabir": {
+    bio: "Kabir (1440-1518) fue un poeta y místico de la India, figura central del movimiento devocional «bhakti» y voz de enorme influencia en la espiritualidad del subcontinente. De origen humilde, criado en una familia de tejedores musulmanes en un entorno hindú, predicó una devoción directa a lo divino que trascendía las fronteras entre religiones y rechazaba el ritualismo y las castas. Sus poemas y dísticos, transmitidos oralmente, usan un lenguaje sencillo, popular y lleno de imágenes cotidianas. Es venerado por hindúes, musulmanes y sijs por igual.",
+    obras: ["Dohas (dísticos)", "Bijak"],
+  },
+  "mirabai": {
+    bio: "Mirabai (1498-1547) es una de las poetas devocionales más célebres de la India y figura legendaria del movimiento «bhakti». Princesa rajput según la tradición, renunció a las convenciones de su rango para consagrar su vida y su poesía a la devoción amorosa al dios Krishna. Sus cantos, de gran intensidad emocional, expresan el anhelo de unión con lo divino en clave de amor apasionado. Compuestos para ser cantados, se transmitieron durante siglos por vía oral y siguen vivos en la devoción popular. Su figura encarna la libertad espiritual frente a las imposiciones sociales.",
+    obras: ["Padavali (cantos devocionales)"],
+  },
+  "jorge-manrique": {
+    bio: "Jorge Manrique (1440-1479) fue un poeta y noble castellano del siglo XV, recordado sobre todo por una sola obra maestra. Sus «Coplas a la muerte de su padre» son una de las elegías más perfectas de la lengua española: una meditación serena y solemne sobre la fugacidad de la vida, la fortuna y la muerte, escrita en las llamadas «coplas de pie quebrado». La obra equilibra el lamento personal con una reflexión universal de raíz medieval. Hombre de armas, Manrique murió joven en combate. Su breve legado le aseguró un lugar imperecedero.",
+    obras: ["Coplas a la muerte de su padre"],
+  },
+  "fray-luis-de-leon": {
+    bio: "Fray Luis de León (1527-1591) fue agustino, humanista, profesor de la Universidad de Salamanca y uno de los grandes poetas del Renacimiento español. Su poesía, de raíz clásica y horaciana, canta el anhelo de paz, la armonía del universo y el ideal de la vida retirada lejos del «mundanal ruido». Fue también notable traductor y prosista. Procesado por la Inquisición por sus traducciones bíblicas, pasó casi cinco años en prisión; la tradición cuenta que retomó su cátedra con un sereno «Decíamos ayer». Su obra une rigor intelectual y serenidad espiritual.",
+    obras: ["Oda a la vida retirada", "Noche serena", "De los nombres de Cristo"],
+  },
+  "santa-teresa-de-jesus": {
+    bio: "Santa Teresa de Jesús (1515-1582) fue una mística, reformadora y escritora española, una de las grandes figuras espirituales y literarias del Siglo de Oro. Fundadora de la reforma del Carmelo descalzo, recorrió España estableciendo conventos pese a innumerables dificultades. Su prosa autobiográfica y mística, de lenguaje sencillo, vivo y directo, es admirada tanto por su valor espiritual como literario. Como poeta dejó composiciones de honda emoción religiosa. Fue la primera mujer proclamada Doctora de la Iglesia. Su huella en la lengua y la espiritualidad es inmensa.",
+    obras: ["Libro de la vida", "Las moradas", "Camino de perfección"],
+  },
+  "john-donne": {
+    bio: "John Donne (1572-1631) es el máximo representante de los «poetas metafísicos» ingleses. Su poesía rompió con la suavidad renacentista mediante un estilo intelectual, áspero y apasionado, lleno de ingeniosas y sorprendentes imágenes (los llamados «conceptos»). Cultivó tanto una intensa poesía amorosa y erótica en su juventud como, tras ordenarse sacerdote anglicano, una hondísima poesía religiosa y sermones célebres. Llegó a ser deán de la catedral de San Pablo de Londres. Redescubierto en el siglo XX, influyó decisivamente en la poesía moderna.",
+    obras: ["Canciones y sonetos", "Sonetos sagrados", "Devociones"],
+  },
+  "john-milton": {
+    bio: "John Milton (1608-1674) es uno de los mayores poetas de la lengua inglesa, autor de la gran epopeya «El paraíso perdido». De vasta erudición y firmes convicciones religiosas y políticas, fue un defensor de la causa parlamentaria durante la revolución inglesa y autor de influyentes textos en prosa, como su alegato por la libertad de prensa. Quedó ciego en plena madurez y dictó su obra mayor, un monumental poema sobre la caída del hombre que reelabora el relato bíblico con grandeza épica. Su lenguaje y su ambición marcaron toda la poesía posterior.",
+    obras: ["El paraíso perdido", "El paraíso recobrado", "Areopagítica"],
+  },
+  "johann-wolfgang-von-goethe": {
+    bio: "Johann Wolfgang von Goethe (1749-1832) es la figura central de la literatura alemana y una de las mentes más universales de la cultura europea. Poeta, novelista, dramaturgo y también hombre de ciencia, encarnó el ideal del genio total. Su drama «Fausto», fruto de toda una vida, es una de las cumbres de la literatura mundial. Impulsó junto a Schiller el clasicismo de Weimar, tras participar de joven en el movimiento prerromántico. Su poesía lírica, vastísima y de extraordinaria variedad, abarca desde la canción popular hasta el «Diván de Oriente y Occidente», inspirado en Hafez.",
+    obras: ["Fausto", "Diván de Oriente y Occidente", "Las penas del joven Werther"],
+  },
+  "novalis": {
+    bio: "Novalis (1772-1801), seudónimo de Friedrich von Hardenberg, fue el poeta más representativo del primer Romanticismo alemán. De formación filosófica y científica, murió muy joven, dejando una obra breve pero de enorme influencia. Sus «Himnos a la noche», escritos tras la muerte de su joven prometida, hacen de la noche y la muerte un espacio de revelación y anhelo de lo infinito. Cultivó también la novela y el aforismo, persiguiendo una «poetización» del mundo. Su figura encarna como ninguna el ideal romántico de fusión entre poesía, amor, filosofía y muerte.",
+    obras: ["Himnos a la noche", "Enrique de Ofterdingen", "Granos de polen"],
+  },
+  "heinrich-heine": {
+    bio: "Heinrich Heine (1797-1856) fue uno de los grandes poetas alemanes del siglo XIX, en la encrucijada entre el Romanticismo y su crítica irónica. Su «Libro de las canciones» recogió poemas de tono popular y sentimental que fueron musicados innumerables veces. Pero Heine fue también un escritor mordaz, periodista y pensador comprometido, cuya ironía desmontaba la solemnidad romántica. De origen judío y espíritu crítico, vivió gran parte de su vida exiliado en París. Sus últimos años, postrado por la enfermedad, dieron una poesía estremecedora y lúcida.",
+    obras: ["Libro de las canciones", "Romancero", "Cuadros de viaje"],
+  },
 };
