@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useMemo, useRef } from "react";
 import { supabase } from "./supabase";
+import { BIOS } from "./biografias";
 
 /* Fase 1: guardado en el navegador (localStorage). En la Fase 3 esto se sustituye por Supabase. */
 if (typeof window !== "undefined" && !window.storage) {
@@ -462,6 +463,7 @@ export default function App() {
   const [batchClosed, setBatchClosed] = useState(null); // {items, text, loading}
   const [stats, setStats] = useState(null);
   const [statsLoading, setStatsLoading] = useState(false);
+  const [authorId, setAuthorId] = useState(null);
 
   /* fuentes */
   useEffect(() => {
@@ -593,7 +595,8 @@ export default function App() {
         <BatchResult data={batchClosed} onContinue={() => { nextPoet(); setScreen("vote"); }} nextGoal={batchInfo(total).goal} />
       )}
       {screen === "stats" && <Stats rows={stats} loading={statsLoading} onBack={() => setScreen(poet ? "vote" : "intro")} />}
-      {screen === "gallery" && <Gallery onBack={() => setScreen(poet ? "vote" : "intro")} />}
+      {screen === "gallery" && <Gallery onBack={() => setScreen(poet ? "vote" : "intro")} onSelect={(id) => { setAuthorId(id); setScreen("autor"); }} />}
+      {screen === "autor" && <AuthorScreen id={authorId} onBack={() => setScreen("gallery")} />}
     </Shell>
   );
 }
@@ -660,7 +663,7 @@ function Shell({ children, screen, setScreen, onStats, total }) {
             </div>
             <nav style={{ display: "flex", gap: 8, alignItems: "center" }}>
               <span style={{ fontFamily: MONO, fontSize: 11, color: "#6b6450", marginRight: 4 }}>has completado {total} fichas</span>
-              <button onClick={() => setScreen("gallery")} style={{ ...BTN_GHOST, fontSize: 11, padding: "8px 12px" }}>Retratos</button>
+              <button onClick={() => setScreen("gallery")} style={{ ...BTN_GHOST, fontSize: 11, padding: "8px 12px" }}>Autores</button>
               <button onClick={onStats} style={{ ...BTN_GHOST, fontSize: 11, padding: "8px 12px" }}>Pantonario público</button>
             </nav>
           </header>
@@ -978,32 +981,80 @@ function Stats({ rows, loading, onBack }) {
   );
 }
 
-/* ---------- galería de retratos ---------- */
-function Gallery({ onBack }) {
+/* ---------- galería de autores ---------- */
+function Gallery({ onBack, onSelect }) {
   return (
     <main style={{ padding: "30px 0" }}>
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", marginBottom: 6 }}>
         <h2 style={{ fontFamily: DISP, fontWeight: 900, fontSize: 30, textTransform: "uppercase", letterSpacing: ".02em", margin: 0 }}>
-          Galería de retratos
+          Galería de autores
         </h2>
         <button onClick={onBack} style={{ ...BTN_GHOST, fontSize: 11, padding: "8px 12px" }}>Volver</button>
       </div>
       <p style={{ fontFamily: MONO, fontSize: 12, color: "#6b6450", margin: "0 0 22px" }}>
-        {POETS.length} retratos
+        {POETS.length} autores · si quieres conocer su biografía haz clic sobre cada uno de ellos
       </p>
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(150px, 1fr))", gap: 1, border: `1px solid ${INK}`, background: INK }}>
         {POETS.map((p, i) => (
-          <div key={p.id} style={{ background: PAPER }}>
+          <div key={p.id} onClick={() => onSelect(p.id)} style={{ background: PAPER, cursor: "pointer" }}>
             <div style={{ position: "relative" }}>
               <Avatar seed={p.id} size="100%" />
               <span style={{ position: "absolute", top: 5, left: 6, fontFamily: MONO, fontSize: 10, color: INK, background: "rgba(239,233,217,.8)", padding: "0 3px" }}>{pad(i + 1, 2)}</span>
             </div>
             <div style={{ borderTop: `1px solid ${INK}`, padding: "7px 8px" }}>
-              <div style={{ fontFamily: DISP, fontWeight: 700, fontSize: 12, lineHeight: 1.05, letterSpacing: ".01em" }}>{p.name}</div>
+              <div style={{ fontFamily: DISP, fontWeight: 700, fontSize: 12, lineHeight: 1.05, letterSpacing: ".01em", textDecoration: "underline", textUnderlineOffset: 2 }}>{p.name}</div>
               <div style={{ fontFamily: MONO, fontSize: 9, color: "#6b6450", marginTop: 2 }}>{p.note}</div>
             </div>
           </div>
         ))}
+      </div>
+    </main>
+  );
+}
+
+/* ---------- ficha de autor ---------- */
+function AuthorScreen({ id, onBack }) {
+  const poet = POET_BY_ID[id];
+  const ficha = BIOS[id];
+  return (
+    <main style={{ padding: "30px 0" }}>
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", marginBottom: 18 }}>
+        <button onClick={onBack} style={{ ...BTN_GHOST, fontSize: 11, padding: "8px 12px" }}>← Volver a autores</button>
+        <span style={{ fontFamily: MONO, fontSize: 11, color: "#6b6450" }}>{catCode(128, 128, 128)}</span>
+      </div>
+
+      <div style={{ display: "grid", gridTemplateColumns: "200px 1fr", gap: 24, alignItems: "start" }}>
+        <div style={{ border: `1px solid ${INK}` }}>
+          <Avatar seed={id} size="100%" />
+        </div>
+        <div>
+          <h2 style={{ fontFamily: DISP, fontWeight: 900, fontSize: 34, lineHeight: 1, textTransform: "uppercase", letterSpacing: ".01em", margin: "0 0 6px" }}>
+            {poet ? poet.name : "Autor"}
+          </h2>
+          <div style={{ fontFamily: MONO, fontSize: 12, color: "#6b6450", marginBottom: 18 }}>
+            {poet ? `${poet.note} · ${poet.years}` : ""}
+          </div>
+
+          {ficha ? (
+            <>
+              <p style={{ fontSize: 16.5, lineHeight: 1.62, margin: "0 0 20px" }}>{ficha.bio}</p>
+              {ficha.obras && ficha.obras.length > 0 && (
+                <div style={{ border: `1px solid ${INK}`, background: PAPER, padding: "14px 16px" }}>
+                  <div style={{ fontFamily: DISP, fontWeight: 700, fontSize: 13, textTransform: "uppercase", letterSpacing: ".06em", marginBottom: 8 }}>Obras clave</div>
+                  <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
+                    {ficha.obras.map((o, i) => (
+                      <span key={i} style={{ fontFamily: MONO, fontSize: 12, border: `1px solid ${INK}`, padding: "4px 8px", background: PAPER2 }}>{o}</span>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </>
+          ) : (
+            <p style={{ fontSize: 16, lineHeight: 1.6, color: "#6b6450", margin: 0 }}>
+              Biografía en preparación. Pronto añadiremos la ficha de este autor.
+            </p>
+          )}
+        </div>
       </div>
     </main>
   );
