@@ -1016,17 +1016,73 @@ function Gallery({ onBack, onSelect }) {
 function AuthorScreen({ id, onBack }) {
   const poet = POET_BY_ID[id];
   const ficha = BIOS[id];
+  const [media, setMedia] = useState(undefined); // undefined=cargando · null=sin votos · {r,g,b,a,n}=ok
+
+  useEffect(() => {
+    let activo = true;
+    setMedia(undefined);
+    (async () => {
+      try {
+        const { data, error } = await supabase
+          .from("votos")
+          .select("r,g,b,a")
+          .eq("poeta", id)
+          .limit(5000);
+        if (error) throw error;
+        if (!activo) return;
+        if (!data || data.length === 0) { setMedia(null); return; }
+        const n = data.length;
+        const s = data.reduce(
+          (a, v) => ({ r: a.r + v.r, g: a.g + v.g, b: a.b + v.b, a: a.a + v.a }),
+          { r: 0, g: 0, b: 0, a: 0 }
+        );
+        setMedia({ r: Math.round(s.r / n), g: Math.round(s.g / n), b: Math.round(s.b / n), a: Math.round(s.a / n), n });
+      } catch (e) {
+        if (activo) setMedia(null);
+      }
+    })();
+    return () => { activo = false; };
+  }, [id]);
+
   return (
     <main style={{ padding: "30px 0" }}>
-      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", marginBottom: 18 }}>
+      <div style={{ marginBottom: 18 }}>
         <button onClick={onBack} style={{ ...BTN_GHOST, fontSize: 11, padding: "8px 12px" }}>← Volver a autores</button>
-        <span style={{ fontFamily: MONO, fontSize: 11, color: "#6b6450" }}>{catCode(128, 128, 128)}</span>
       </div>
 
       <div style={{ display: "grid", gridTemplateColumns: "200px 1fr", gap: 24, alignItems: "start" }}>
-        <div style={{ border: `1px solid ${INK}` }}>
-          <Avatar seed={id} size="100%" />
+        <div>
+          <div style={{ border: `1px solid ${INK}` }}>
+            <Avatar seed={id} size="100%" />
+          </div>
+
+          <div style={{ marginTop: 12, border: `1px solid ${INK}`, background: PAPER }}>
+            <div style={{ position: "relative", height: 72 }}>
+              <div style={{ position: "absolute", inset: 0, ...checker }} />
+              {media && media.r !== undefined && (
+                <div style={{ position: "absolute", inset: 0, background: toHex(media.r, media.g, media.b), opacity: media.a / 255 }} />
+              )}
+            </div>
+            <div style={{ borderTop: `1px solid ${INK}`, padding: "8px 9px" }}>
+              <div style={{ fontFamily: DISP, fontWeight: 700, fontSize: 11.5, letterSpacing: ".05em", textTransform: "uppercase" }}>Color medio</div>
+              {media === undefined && <div style={{ fontFamily: MONO, fontSize: 10, color: "#6b6450", marginTop: 4 }}>Calculando…</div>}
+              {media === null && <div style={{ fontFamily: MONO, fontSize: 10, color: "#6b6450", marginTop: 4 }}>Aún sin votaciones</div>}
+              {media && media.r !== undefined && (
+                <>
+                  <div style={{ display: "flex", justifyContent: "space-between", marginTop: 6, fontFamily: MONO, fontSize: 10 }}>
+                    <span>{catCode(media.r, media.g, media.b)}</span>
+                    <span>{toHex(media.r, media.g, media.b)}</span>
+                  </div>
+                  <div style={{ fontFamily: MONO, fontSize: 10, color: "#6b6450", marginTop: 2 }}>{colorName(media.r, media.g, media.b)}</div>
+                  <div style={{ fontFamily: MONO, fontSize: 9, color: "#8a8266", marginTop: 6, lineHeight: 1.35 }}>
+                    media de {media.n} votación{media.n !== 1 ? "es" : ""} recibida{media.n !== 1 ? "s" : ""}
+                  </div>
+                </>
+              )}
+            </div>
+          </div>
         </div>
+
         <div>
           <h2 style={{ fontFamily: DISP, fontWeight: 900, fontSize: 34, lineHeight: 1, textTransform: "uppercase", letterSpacing: ".01em", margin: "0 0 6px" }}>
             {poet ? poet.name : "Autor"}
