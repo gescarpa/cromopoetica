@@ -600,13 +600,47 @@ export default function App() {
 
 /* ---------- API: comentario de gama ---------- */
 async function fetchGama(items) {
-  // Fase 1: análisis de gama calculado en el propio navegador (la IA real se conecta en la Fase 4).
+  // Datos y relaciones cromáticas (también sirven de respaldo local)
+  const data = items.map((it) => {
+    const { h, s, l } = rgbToHsl(it.r, it.g, it.b);
+    return {
+      poeta: it.poet.name, periodo: it.poet.years, escuela: it.poet.note,
+      R_temperatura: it.r, G_arraigo: it.g, B_abismo: it.b, A_canonicidad: it.a,
+      hex: toHex(it.r, it.g, it.b), nombre_color: colorName(it.r, it.g, it.b),
+      matiz: Math.round(h), saturacion: Math.round(s), luminosidad: Math.round(l),
+    };
+  });
   const rels = [];
   for (let i = 0; i < items.length; i++)
     for (let j = i + 1; j < items.length; j++)
       rels.push(`${items[i].poet.name} ↔ ${items[j].poet.name}: ${relation(items[i], items[j])}`);
-  const names = items.map((it) => `${it.poet.name} — ${colorName(it.r, it.g, it.b)}`).join("; ");
-  return `Esta gama reúne a ${names}.\n\nRelaciones cromáticas entre sus poéticas:\n\n` + rels.join("\n");
+
+  const prompt =
+`Eres a la vez crítico literario y teórico del color. En CROMOPOÉTICA cada poeta recibe un color RGBA donde:
+R = temperatura (0 frío/intelecto → 255 visceral/emoción), G = arraigo (0 etéreo/abstracto → 255 terrenal/corpóreo), B = abismo (0 claro/inmediato → 255 hermético/metafísico), A = canonicidad (opacidad: translúcido al margen → opaco en el canon). Máximo en R,G,B = blanco (toda la luz).
+
+Estos son los colores que un lector acaba de asignar:
+${JSON.stringify(data, null, 2)}
+
+Relaciones cromáticas calculadas entre ellos:
+${rels.join("\n")}
+
+Escribe UN solo párrafo en español (160–220 palabras), culto pero cálido, que lea la gama como si fueran parentescos poéticos: comenta si las poéticas son cercanas o lejanas, dónde hay armonía (análogos) o tensión (complementarios), qué dice de cada autor su temperatura, su arraigo, su abismo y su lugar en el canon, y qué retrato de conjunto componen estos colores juntos. Usa los nombres de los poetas y, si encaja, los nombres de color. Nada de listas, títulos ni markdown: prosa corrida.`;
+
+  try {
+    const res = await fetch("/api/gama", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ prompt }),
+    });
+    const j = await res.json();
+    if (res.ok && j.text) return j.text;
+    throw new Error("sin texto");
+  } catch (e) {
+    // respaldo: análisis local si la IA no responde
+    const names = items.map((it) => `${it.poet.name} — ${colorName(it.r, it.g, it.b)}`).join("; ");
+    return `Esta gama reúne a ${names}.\n\nRelaciones cromáticas entre sus poéticas:\n\n` + rels.join("\n");
+  }
 }
 
 /* ---------- contenedor / cabecera ---------- */
