@@ -625,7 +625,7 @@ ${JSON.stringify(data, null, 2)}
 Relaciones cromáticas calculadas entre ellos:
 ${rels.join("\n")}
 
-Escribe UN solo párrafo en español (160–220 palabras), culto pero cálido, que lea la gama como si fueran parentescos poéticos: comenta si las poéticas son cercanas o lejanas, dónde hay armonía (análogos) o tensión (complementarios), qué dice de cada autor su temperatura, su arraigo, su abismo y su lugar en el canon, y qué retrato de conjunto componen estos colores juntos. Usa los nombres de los poetas y, si encaja, los nombres de color. Nada de listas, títulos ni markdown: prosa corrida.`;
+Escribe un comentario en español, lírico y culto, de entre 300 y 450 palabras, en VARIOS párrafos de prosa corrida (sin listas, sin títulos, sin markdown). Articúlalo en tres movimientos, sin rótulos visibles: primero, un breve retrato del estilo de cada autor a partir de sus coordenadas (temperatura, arraigo, abismo y lugar en el canon) y de su escuela, una o dos frases por autor, huyendo del tópico y del resumen de manual; después, un texto sobre las cercanías y las distancias entre ellos —dónde sus poéticas se hermanan (colores análogos), dónde se tensan o se oponen (complementarios), qué conversación sostendrían si coincidieran—; y al cerrar, una imagen de conjunto: qué clima, qué paisaje o qué acorde componen estos colores juntos. Usa los nombres de los poetas y, cuando encaje con naturalidad, los nombres de color. Tono ensayístico, sensible y preciso, sin caer en lo pomposo ni en la enumeración mecánica.`;
 
   try {
     const res = await fetch("/api/gama", {
@@ -659,7 +659,7 @@ function Shell({ children, screen, setScreen, onStats, total }) {
               <span style={{ fontFamily: DISP, fontWeight: 900, letterSpacing: ".14em", fontSize: 18, textTransform: "uppercase" }}>Cromopoética</span>
             </div>
             <nav style={{ display: "flex", gap: 8, alignItems: "center" }}>
-              <span style={{ fontFamily: MONO, fontSize: 11, color: "#6b6450", marginRight: 4 }}>{total} fichas</span>
+              <span style={{ fontFamily: MONO, fontSize: 11, color: "#6b6450", marginRight: 4 }}>has completado {total} fichas</span>
               <button onClick={() => setScreen("gallery")} style={{ ...BTN_GHOST, fontSize: 11, padding: "8px 12px" }}>Retratos</button>
               <button onClick={onStats} style={{ ...BTN_GHOST, fontSize: 11, padding: "8px 12px" }}>Pantonario público</button>
             </nav>
@@ -911,6 +911,32 @@ function BatchResult({ data, onContinue, nextGoal }) {
 
 /* ---------- estadística pública ---------- */
 function Stats({ rows, loading, onBack }) {
+  const [orden, setOrden] = useState("gama"); // 'gama' | 'votos'
+  const sorted = useMemo(() => {
+    if (!rows) return rows;
+    const arr = [...rows];
+    if (orden === "votos") {
+      arr.sort((a, b) => b.n - a.n);
+    } else {
+      // por gama: matiz del arcoíris; los neutros (poco saturados) al final, por luminosidad
+      const key = (x) => {
+        const { h, s, l } = rgbToHsl(x.r, x.g, x.b);
+        return s < 12 ? 1000 + l : h;
+      };
+      arr.sort((a, b) => key(a) - key(b));
+    }
+    return arr;
+  }, [rows, orden]);
+
+  const tab = (val, label) => (
+    <button onClick={() => setOrden(val)} style={{
+      fontFamily: MONO, fontSize: 11, padding: "6px 11px", cursor: "pointer",
+      border: `1px solid ${INK}`,
+      background: orden === val ? INK : "transparent",
+      color: orden === val ? PAPER : INK,
+    }}>{label}</button>
+  );
+
   return (
     <main style={{ padding: "30px 0" }}>
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", marginBottom: 6 }}>
@@ -919,17 +945,25 @@ function Stats({ rows, loading, onBack }) {
         </h2>
         <button onClick={onBack} style={{ ...BTN_GHOST, fontSize: 11, padding: "8px 12px" }}>Volver</button>
       </div>
-      <p style={{ fontFamily: MONO, fontSize: 12, color: "#6b6450", margin: "0 0 22px" }}>
+      <p style={{ fontFamily: MONO, fontSize: 12, color: "#6b6450", margin: "0 0 18px" }}>
         media de todas las votaciones · este archivo es compartido y visible para cualquier visitante
       </p>
+
+      {!loading && rows && rows.length > 0 && (
+        <div style={{ display: "flex", gap: 6, marginBottom: 18, flexWrap: "wrap" }}>
+          <span style={{ fontFamily: MONO, fontSize: 11, color: "#6b6450", alignSelf: "center", marginRight: 4 }}>ordenar:</span>
+          {tab("gama", "por gama cromática")}
+          {tab("votos", "por nº de votos")}
+        </div>
+      )}
 
       {loading && <div style={{ fontFamily: MONO, fontSize: 13, color: "#6b6450" }}>Reuniendo votos…</div>}
       {!loading && rows && rows.length === 0 && (
         <div style={{ fontFamily: MONO, fontSize: 13, color: "#6b6450" }}>Todavía no hay votos en el archivo común. Sé el primero.</div>
       )}
-      {!loading && rows && rows.length > 0 && (
+      {!loading && sorted && sorted.length > 0 && (
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(168px, 1fr))", gap: 12 }}>
-          {rows.map((row) => (
+          {sorted.map((row) => (
             <div key={row.id}>
               <Chip r={row.r} g={row.g} b={row.b} a={row.a} name={row.poet.name} note={row.poet.note} years={row.poet.years} height={120} faded={0.55 + 0.45 * (row.consenso / 100)} />
               <div style={{ fontFamily: MONO, fontSize: 9.5, color: "#6b6450", marginTop: 3, display: "flex", justifyContent: "space-between" }}>
@@ -955,7 +989,7 @@ function Gallery({ onBack }) {
         <button onClick={onBack} style={{ ...BTN_GHOST, fontSize: 11, padding: "8px 12px" }}>Volver</button>
       </div>
       <p style={{ fontFamily: MONO, fontSize: 12, color: "#6b6450", margin: "0 0 22px" }}>
-        {POETS.length} retratos vectoriales · dime el número de los que quieras afinar
+        {POETS.length} retratos
       </p>
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(150px, 1fr))", gap: 1, border: `1px solid ${INK}`, background: INK }}>
         {POETS.map((p, i) => (
