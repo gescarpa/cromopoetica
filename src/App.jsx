@@ -949,7 +949,7 @@ function Stats({ rows, loading, onBack }) {
         <button onClick={onBack} style={{ ...BTN_GHOST, fontSize: 11, padding: "8px 12px" }}>Volver</button>
       </div>
       <p style={{ fontFamily: MONO, fontSize: 12, color: "#6b6450", margin: "0 0 18px" }}>
-        media de todas las votaciones · este archivo es compartido y visible para cualquier visitante
+        media de todas las votaciones realizadas por todos los visitantes
       </p>
 
       {!loading && rows && rows.length > 0 && (
