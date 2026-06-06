@@ -131,4 +131,80 @@ export const BIOS = {
     bio: "Anna Ajmátova (1889-1966) es una de las grandes voces de la poesía rusa del siglo XX y figura del acmeísmo, que defendía la claridad y la precisión frente al simbolismo. Su lírica temprana, intimista y depurada, le dio pronta fama. Bajo el estalinismo sufrió la persecución: su obra fue censurada, su hijo y su esposo fueron represaliados. De esa experiencia surgió «Réquiem», estremecedor testimonio del terror, que durante años solo pudo conservar en la memoria. Encarnó la dignidad de la poesía frente a la opresión.",
     obras: ["Réquiem", "Poema sin héroe", "La tarde"],
   },
+  "marina-tsvetaieva": {
+    bio: "Marina Tsvetáieva (1892-1941) es una de las voces más intensas de la poesía rusa del siglo XX. Su lírica, de gran energía rítmica y sintaxis quebrada, se nutre de la pasión, el desarraigo y la entrega absoluta a la palabra. La Revolución y la guerra civil rusa la condujeron a un largo y penoso exilio por Europa, marcado por la pobreza. Su regreso a la Unión Soviética terminó en tragedia: la represión cayó sobre su familia y ella se quitó la vida en 1941. Reconocida plenamente después, hoy es figura imprescindible de la poesía europea.",
+    obras: ["Poema del fin", "Las millas", "Después de Rusia"],
+  },
+  "t-s-eliot": {
+    bio: "T. S. Eliot (1888-1965) fue un poeta, dramaturgo y crítico nacido en Estados Unidos y nacionalizado británico, figura central del modernismo anglosajón. Su poema «La tierra baldía» renovó radicalmente la poesía con su técnica de collage, su erudición y su visión desolada del mundo de posguerra. Como crítico ejerció enorme influencia, y como editor impulsó a muchos autores. Su obra evolucionó hacia una dimensión espiritual y religiosa que culmina en los «Cuatro cuartetos». Recibió el Premio Nobel de Literatura en 1948.",
+    obras: ["La tierra baldía", "Cuatro cuartetos", "La canción de amor de J. Alfred Prufrock"],
+  },
+  "cesar-vallejo": {
+    bio: "César Vallejo (1892-1938) es uno de los poetas más innovadores y conmovedores de la lengua española. Nacido en los Andes peruanos, su obra parte del modernismo para romperlo desde dentro: su libro «Trilce» lleva la experimentación del lenguaje a un extremo de audacia rara vez igualado. La pobreza, la cárcel y el exilio en Europa marcaron su vida. En sus «Poemas humanos» y en los versos inspirados por la Guerra Civil española une la vanguardia con una hondísima solidaridad con el sufrimiento humano. Murió en París, como había presentido en sus versos.",
+    obras: ["Trilce", "Los heraldos negros", "Poemas humanos"],
+  },
+  "vicente-huidobro": {
+    bio: "Vicente Huidobro (1893-1948), chileno, fue uno de los grandes impulsores de la vanguardia en lengua española y creador del «creacionismo». Según su célebre lema, el poeta no debe imitar la naturaleza, sino crear realidades nuevas: «hacer un poema como la naturaleza hace un árbol». Vivió entre Chile, París y Madrid, en contacto con la vanguardia internacional. Su obra mayor, «Altazor», es un vertiginoso poema en el que el lenguaje se descompone hasta el puro sonido. Su figura, polémica y brillante, fue decisiva para la modernidad poética.",
+    obras: ["Altazor", "Temblor de cielo"],
+  },
+  "federico-garcia-lorca": {
+    bio: "Federico García Lorca (1898-1936) es el poeta y dramaturgo español más conocido del siglo XX y figura central de la Generación del 27. Su obra funde la tradición popular andaluza con la vanguardia: del «Romancero gitano», de hondo simbolismo, al desgarro surrealista de «Poeta en Nueva York». Brillante también en el teatro, con tragedias como «Bodas de sangre», recorrió España acercando la cultura al pueblo con el grupo La Barraca. Fue fusilado al inicio de la Guerra Civil, y su muerte lo convirtió en símbolo. Su influencia es universal.",
+    obras: ["Romancero gitano", "Poeta en Nueva York", "Bodas de sangre"],
+  },
+  "pablo-neruda": {
+    bio: "Pablo Neruda (1904-1973), chileno, es uno de los poetas más leídos e influyentes del siglo XX. Su obra es vastísima y de registros muy diversos: del intimismo amoroso de «Veinte poemas de amor» a la épica americana del «Canto general», pasando por las celebraciones de lo cotidiano en sus «Odas elementales». Diplomático, senador y militante comunista, vivió persecución y exilio. Recibió el Premio Nobel de Literatura en 1971. Su voz, torrencial y sensorial, transformó la manera de escribir poesía en español.",
+    obras: ["Veinte poemas de amor y una canción desesperada", "Canto general", "Odas elementales"],
+  },
+  "gabriela-mistral": {
+    bio: "Gabriela Mistral (1889-1957), seudónimo de Lucila Godoy, fue la primera persona latinoamericana en recibir el Premio Nobel de Literatura, en 1945. Maestra rural de origen humilde, hizo de la educación y la infancia ejes de su vida y su obra. Su poesía, de aparente sencillez y honda emoción, aborda el amor, la maternidad simbólica, el dolor y lo sagrado. Ejerció además como diplomática y figura cultural en varios países. Su reconocimiento abrió camino a la proyección internacional de la poesía latinoamericana escrita por mujeres.",
+    obras: ["Desolación", "Ternura", "Tala"],
+  },
+  "jorge-luis-borges": {
+    bio: "Jorge Luis Borges (1899-1986), argentino, es uno de los escritores más influyentes del siglo XX, célebre sobre todo por sus relatos, pero también poeta esencial. Su poesía, de aire clásico y tono reflexivo, medita sobre el tiempo, la identidad, los espejos, el laberinto y el infinito, los mismos temas que recorren su narrativa. La ceguera progresiva acentuó en él la dimensión memoriosa y musical del verso. Su erudición y su ironía dieron forma a una obra que difumina las fronteras entre filosofía y literatura. Su huella es planetaria.",
+    obras: ["Fervor de Buenos Aires", "El hacedor", "El otro, el mismo"],
+  },
+  "jose-lezama-lima": {
+    bio: "José Lezama Lima (1910-1976) fue el gran poeta del neobarroco cubano y una figura central de la cultura de la isla. Desde la revista «Orígenes», que dirigió, articuló todo un proyecto estético y espiritual. Su obra, de extraordinaria densidad, despliega un lenguaje suntuoso, lleno de imágenes y referencias cultas, regido por su idea de un «sistema poético del mundo». Es también autor de la célebre novela «Paradiso». Su escritura, exigente y deslumbrante, ejerció una enorme influencia en la poesía latinoamericana posterior.",
+    obras: ["Muerte de Narciso", "Paradiso", "La fijeza"],
+  },
+  "octavio-paz": {
+    bio: "Octavio Paz (1914-1998), mexicano, fue poeta y ensayista, una de las grandes figuras intelectuales del siglo XX en lengua española. Su poesía integra la reflexión filosófica, la exploración del tiempo y el instante, la tradición oriental y la simbología amorosa, como en su extenso poema «Piedra de sol». Como ensayista, «El laberinto de la soledad» es una indagación clásica sobre la identidad mexicana. Diplomático y fundador de revistas influyentes, recibió el Premio Nobel de Literatura en 1990. Su obra es un puente entre culturas.",
+    obras: ["Piedra de sol", "Libertad bajo palabra", "El laberinto de la soledad"],
+  },
+  "paul-celan": {
+    bio: "Paul Celan (1920-1970) es uno de los mayores poetas europeos de la posguerra. De origen judío rumano y lengua alemana, perdió a sus padres en el Holocausto, experiencia que marca toda su obra. Escribió en la lengua de los verdugos una poesía cada vez más hermética y despojada, que busca decir lo indecible del exterminio. Su célebre «Fuga de muerte» es uno de los poemas más estremecedores sobre el tema. Atormentado, se quitó la vida en París. Su obra es una de las reflexiones más hondas sobre el lenguaje tras la catástrofe.",
+    obras: ["Fuga de muerte", "Amapola y memoria", "Reja del lenguaje"],
+  },
+  "wis-awa-szymborska": {
+    bio: "Wisława Szymborska (1923-2012), polaca, fue una poeta de aparente sencillez y profunda agudeza, premiada con el Nobel de Literatura en 1996. Su obra, no muy extensa pero muy querida, observa lo cotidiano y lo histórico con ironía, humor y una curiosidad filosófica que desarma. Huye de toda solemnidad para plantear, desde lo concreto, las grandes preguntas sobre el azar, la existencia y el lugar del ser humano en el mundo. Su voz cercana y luminosa la convirtió en una de las poetas más leídas de su tiempo.",
+    obras: ["Sal", "Gente en el puente", "Fin y principio"],
+  },
+  "alejandra-pizarnik": {
+    bio: "Alejandra Pizarnik (1936-1972), argentina, es una de las voces más intensas y singulares de la poesía latinoamericana. Su obra, breve y de extrema concentración, trabaja el silencio, la noche, la infancia y la muerte con un lenguaje depurado hasta el hueso. Vivió un tiempo en París, en contacto con el surrealismo y con grandes escritores. Su poesía bordea siempre el abismo: la palabra como tentativa y a la vez imposibilidad de nombrar el dolor. Murió muy joven. Su figura y su obra ejercen una fascinación que no ha dejado de crecer.",
+    obras: ["Árbol de Diana", "Extracción de la piedra de locura", "El infierno musical"],
+  },
+  "sylvia-plath": {
+    bio: "Sylvia Plath (1932-1963) es una de las figuras centrales de la llamada «poesía confesional» estadounidense. Su obra integra la experiencia íntima, el conflicto psíquico y el malestar con una intensidad extrema y un dominio formal notable. Su único libro de poemas publicado en vida fue «El coloso»; la fuerza arrolladora de «Ariel», aparecido tras su muerte, consolidó su mito. Escribió también la novela autobiográfica «La campana de cristal». Su suicidio a los treinta años marcó la lectura de su obra, que conviene no reducir a su biografía.",
+    obras: ["Ariel", "El coloso", "La campana de cristal"],
+  },
+  "allen-ginsberg": {
+    bio: "Allen Ginsberg (1926-1997) fue el poeta más emblemático de la generación beat estadounidense. Su extenso poema «Aullido», cuya publicación provocó un juicio por obscenidad, se convirtió en un manifiesto generacional contra el conformismo de la posguerra. Heredero del verso libre y profético de Whitman, mezcló crítica social, espiritualidad oriental, experiencia personal y oralidad. Activista incansable, fue figura clave de la contracultura. Su voz, expansiva y desinhibida, transformó la poesía estadounidense y su relación con el público.",
+    obras: ["Aullido", "Kaddish"],
+  },
+  "idea-vilarino": {
+    bio: "Idea Vilariño (1920-2009), uruguaya, fue una de las grandes voces de la poesía rioplatense y miembro de la influyente Generación del 45. Su lírica amorosa, de extrema intensidad y desnudez, indaga en el deseo, la pérdida y la soledad con una lucidez descarnada. Escribió también ensayo y fue una destacada estudiosa de la canción popular. Su célebre serie de «Poemas de amor» nació de una relación marcada por la ausencia. Su voz, sobria y demoledora, la sitúa entre las poetas esenciales en lengua española del siglo XX.",
+    obras: ["Poemas de amor", "Nocturnos", "Pobre mundo"],
+  },
+  "blanca-varela": {
+    bio: "Blanca Varela (1926-2009) es una de las voces fundamentales de la poesía peruana y latinoamericana del siglo XX. Vinculada en su juventud al ambiente intelectual de París, donde trató a figuras del surrealismo y del existencialismo, desarrolló una obra exigente y personalísima. Su poesía, de tono sobrio y a menudo sombrío, explora el cuerpo, el desencanto y la condición humana con imágenes precisas y una ironía contenida. Fue la primera mujer en recibir el Premio Internacional de Poesía Federico García Lorca. Su reconocimiento creció con los años.",
+    obras: ["Canto villano", "Ejercicios materiales", "El libro de barro"],
+  },
+  "mahmud-darwish": {
+    bio: "Mahmud Darwish (1941-2008) es el poeta nacional palestino y una de las grandes voces de la poesía árabe contemporánea. Su obra dio expresión lírica a la experiencia del exilio, el despojo y la identidad de su pueblo, sin renunciar nunca a la dimensión universal y a la belleza del lenguaje. Vivió largos años fuera de su tierra y participó intensamente en la vida cultural y política de su tiempo. Su poesía evolucionó de lo combativo hacia una creciente complejidad simbólica e íntima. Multitudes acudían a sus recitales, y su muerte fue un duelo colectivo.",
+    obras: ["Carnet de identidad", "Once astros", "Mural"],
+  },
+  "olga-orozco": {
+    bio: "Olga Orozco (1920-1999) es una de las voces mayores de la poesía argentina del siglo XX, vinculada a la sensibilidad surrealista. Su obra despliega un mundo de gran densidad simbólica, poblado de presencias, rituales, memoria e infancia, con un tono solemne y visionario. La muerte, lo sagrado y lo oculto recorren sus poemas, escritos en un lenguaje suntuoso y musical. Trabajó también en el periodismo bajo diversos seudónimos. Reconocida con importantes premios, su poesía mantiene una atmósfera única, entre el conjuro y la elegía.",
+    obras: ["Los juegos peligrosos", "Museo salvaje", "Con esta boca, en este mundo"],
+  },
 };
