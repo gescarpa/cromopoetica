@@ -30,7 +30,7 @@ export default async function handler(req, res) {
       },
       body: JSON.stringify({
         model: "claude-3-5-haiku-latest",
-        max_tokens: 1000,
+        max_tokens: 1400,
         messages: [{ role: "user", content: prompt }],
       }),
     });
