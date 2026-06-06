@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useMemo, useRef } from "react";
+import { supabase } from "./supabase";
 
 /* Fase 1: guardado en el navegador (localStorage). En la Fase 3 esto se sustituye por Supabase. */
 if (typeof window !== "undefined" && !window.storage) {
@@ -509,15 +510,14 @@ export default function App() {
   async function submitVote() {
     if (!poet) return;
     const entry = { poet, ...val };
-    // persistir
+    // marca local de a qué poetas ya he votado (para la progresión 3→5→10)
     try {
       await window.storage.set(`mine:${poet.id}`, JSON.stringify({ ...val, t: Date.now() }), false);
-      await window.storage.set(
-        `v:${poet.id}:${Math.random().toString(36).slice(2, 9)}`,
-        JSON.stringify({ p: poet.id, r: val.r, g: val.g, b: val.b, a: val.a, t: Date.now() }),
-        true
-      );
-    } catch (e) { /* degradación: solo memoria */ }
+    } catch (e) { /* localStorage no disponible */ }
+    // envía el voto a la base de datos compartida (Supabase)
+    try {
+      await supabase.from("votos").insert({ poeta: poet.id, r: val.r, g: val.g, b: val.b, a: val.a });
+    } catch (e) { /* sin conexión: el voto local ya queda anotado */ }
 
     const newVoted = votedIds.includes(poet.id) ? votedIds : [...votedIds, poet.id];
     const newBatch = [...sessionBatch, entry];
@@ -545,24 +545,17 @@ export default function App() {
     setStatsLoading(true);
     setScreen("stats");
     try {
-      const list = await window.storage.list("v:", true);
-      const keys = (list?.keys || []).slice(0, 1200);
+      const { data, error } = await supabase
+        .from("votos")
+        .select("poeta,r,g,b,a")
+        .limit(10000);
+      if (error) throw error;
       const agg = {};
-      const chunk = 40;
-      for (let i = 0; i < keys.length; i += chunk) {
-        const part = await Promise.all(
-          keys.slice(i, i + chunk).map((k) =>
-            window.storage.get(k, true).then((x) => x?.value).catch(() => null)
-          )
-        );
-        for (const raw of part) {
-          if (!raw) continue;
-          let v; try { v = JSON.parse(raw); } catch { continue; }
-          const id = v.p; if (!POET_BY_ID[id]) continue;
-          const o = (agg[id] = agg[id] || { n: 0, r: 0, g: 0, b: 0, a: 0, hs: [] });
-          o.n++; o.r += v.r; o.g += v.g; o.b += v.b; o.a += v.a;
-          o.hs.push(rgbToHsl(v.r, v.g, v.b).h);
-        }
+      for (const v of data || []) {
+        const id = v.poeta; if (!POET_BY_ID[id]) continue;
+        const o = (agg[id] = agg[id] || { n: 0, r: 0, g: 0, b: 0, a: 0, hs: [] });
+        o.n++; o.r += v.r; o.g += v.g; o.b += v.b; o.a += v.a;
+        o.hs.push(rgbToHsl(v.r, v.g, v.b).h);
       }
       const rows = Object.entries(agg).map(([id, o]) => {
         const r = o.r / o.n, g = o.g / o.n, b = o.b / o.n, a = o.a / o.n;
