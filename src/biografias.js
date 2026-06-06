@@ -343,4 +343,124 @@ export const BIOS = {
     bio: "Yorgos Seferis (1900-1971) fue el gran renovador de la poesía griega moderna y el primer griego en recibir el Premio Nobel de Literatura, en 1963. Diplomático de carrera, unió en su obra la herencia de la Grecia clásica con la sensibilidad del modernismo europeo. Su poesía, de tono sobrio y melancólico, está marcada por el exilio, el mar, la memoria histórica y el peso de un pasado mítico sobre el presente. Tradujo a Eliot al griego y dialogó con la tradición occidental. Su voz dio a la lengua griega contemporánea una dimensión universal.",
     obras: ["Mythistórima", "Diario de a bordo", "Tres poemas secretos"],
   },
+  "odysseas-elytis": {
+    bio: "Odysseas Elytis (1911-1996) es uno de los grandes poetas griegos del siglo XX, premiado con el Nobel de Literatura en 1979. Vinculado en su juventud al surrealismo, desarrolló una poesía luminosa y solar, celebración del mar, la luz y el paisaje del Egeo, que él identificaba con el alma griega. Su obra mayor, «Digno es», es un vasto poema que funde lo personal, lo histórico y lo litúrgico en un canto a la patria y a la existencia. Su lenguaje, sensorial y exultante, hizo de la claridad mediterránea una forma de conocimiento. Su voz es la del esplendor del mundo griego.",
+    obras: ["Digno es", "Orientaciones", "Sol primero"],
+  },
+  "rabindranath-tagore": {
+    bio: "Rabindranath Tagore (1861-1941) fue un poeta, músico y polímata bengalí, la mayor figura de la cultura india moderna y el primer no europeo en recibir el Premio Nobel de Literatura, en 1913. Su libro «Gitanjali», de hondo lirismo espiritual, lo dio a conocer en Occidente. Reformador social y educativo, fundó una célebre universidad y compuso los himnos nacionales de la India y Bangladés. Su obra, vastísima, une la tradición devocional india con una sensibilidad universal y moderna. Su figura encarnó el diálogo entre Oriente y Occidente con enorme prestigio mundial.",
+    obras: ["Gitanjali", "El jardinero", "La luna nueva"],
+  },
+  "aime-cesaire": {
+    bio: "Aimé Césaire (1913-2008) fue un poeta y político de la Martinica, uno de los fundadores del movimiento de la «négritude», que reivindicaba con orgullo la identidad y la herencia africanas frente al colonialismo. Su «Cuaderno de un retorno al país natal» es un texto fundacional, de lenguaje incandescente y vanguardista, que une la denuncia anticolonial con un poderoso impulso lírico. Diputado y alcalde durante décadas, combinó la creación con un intenso compromiso político. Su obra, surrealista y combativa, dio voz poética a la descolonización. Su influencia recorre toda la literatura caribeña y africana.",
+    obras: ["Cuaderno de un retorno al país natal", "Las armas milagrosas"],
+  },
+  "nazim-hikmet": {
+    bio: "Nazim Hikmet (1902-1963) es el poeta turco moderno más importante y una de las grandes voces de la poesía comprometida del siglo XX. Introdujo el verso libre en la poesía turca, rompiendo con la tradición métrica clásica, e impregnó su obra de un lirismo cálido y humano al servicio de su ideal revolucionario. Su militancia comunista le costó largos años de cárcel y el exilio, en el que murió. Su poesía une la denuncia social, el amor, la nostalgia de la patria y la esperanza, con un lenguaje directo y emocionante. Es hoy un símbolo internacional de la poesía y la libertad.",
+    obras: ["Paisajes humanos", "Duro oficio el exilio", "Poemas de las nueve de la noche"],
+  },
+  "forough-farrojzad": {
+    bio: "Forough Farrojzad (1934-1967) fue una poeta iraní revolucionaria y una de las voces femeninas más audaces de la literatura persa moderna. Su poesía, de gran franqueza emocional y sensual, rompió tabúes al expresar el deseo, la subjetividad y la libertad de la mujer en una sociedad conservadora. También fue cineasta, autora de un célebre documental. Su lenguaje moderno y desnudo renovó la lírica persa. Murió en un accidente de tráfico con solo treinta y dos años. Pese a la censura posterior, su obra siguió siendo un referente de modernidad y emancipación.",
+    obras: ["Otro nacimiento", "Cautiva", "Creamos fe en el comienzo de la estación fría"],
+  },
+  "luis-cernuda": {
+    bio: "Luis Cernuda (1902-1963) es uno de los poetas más hondos y singulares de la Generación del 27. Reunió toda su obra bajo el título «La realidad y el deseo», que resume su tema central: el choque entre el anhelo y un mundo hostil. Su poesía, de tono cada vez más reflexivo y desengañado, abordó con valentía el deseo homosexual y la condición del solitario. Marcó su obra el surrealismo de juventud y, sobre todo, el largo exilio tras la Guerra Civil, en Gran Bretaña, Estados Unidos y México, donde murió. Su influencia sobre la poesía española posterior es enorme.",
+    obras: ["La realidad y el deseo", "Los placeres prohibidos", "Donde habite el olvido"],
+  },
+  "vicente-aleixandre": {
+    bio: "Vicente Aleixandre (1898-1984) fue un poeta de la Generación del 27 y Premio Nobel de Literatura en 1977. Su obra, de raíz surrealista en su primera etapa, despliega una visión cósmica y panteísta en la que el amor, la naturaleza y la muerte se funden en una unidad elemental. Tras la guerra, que pasó en España por su frágil salud, su casa madrileña se convirtió en refugio y faro para las nuevas generaciones de poetas. Su poesía evolucionó hacia una mayor humanización y solidaridad. Maestro generoso, fue un puente vivo entre el 27 y la poesía de posguerra.",
+    obras: ["La destrucción o el amor", "Sombra del paraíso", "Historia del corazón"],
+  },
+  "rafael-alberti": {
+    bio: "Rafael Alberti (1902-1999) es una de las grandes voces de la Generación del 27, de extraordinaria versatilidad. Debutó con el neopopularismo luminoso de «Marinero en tierra», nostalgia del mar de su Cádiz natal, y pronto exploró el surrealismo en «Sobre los ángeles». Militante comunista, puso su poesía al servicio del compromiso político durante la República y la guerra. Tras la derrota, vivió un largo exilio en Argentina e Italia, hasta su regreso a España en 1977. Su obra, vastísima y musical, une la tradición popular, la vanguardia y la voz cívica. Recibió el Premio Cervantes.",
+    obras: ["Marinero en tierra", "Sobre los ángeles", "Retornos de lo vivo lejano"],
+  },
+  "miguel-hernandez": {
+    bio: "Miguel Hernández (1910-1942) fue un poeta de origen humilde, pastor en su juventud en Orihuela, cuya obra une la tradición del Siglo de Oro con la voz de la tierra y del pueblo. A menudo vinculado a la Generación del 36, su poesía evolucionó del fervor religioso temprano a una intensa poesía amorosa y, durante la Guerra Civil, a una poesía combativa y solidaria. Encarcelado por el franquismo tras la guerra, murió de tuberculosis en prisión con solo treinta y un años. Su «Cancionero y romancero de ausencias», escrito en la cárcel, es de una emoción desgarradora. Es símbolo del poeta del pueblo.",
+    obras: ["El rayo que no cesa", "Viento del pueblo", "Cancionero y romancero de ausencias"],
+  },
+  "jose-marti": {
+    bio: "José Martí (1853-1895) fue un escritor, pensador y héroe nacional cubano, figura clave de la independencia de la isla y precursor del modernismo literario. Su poesía, de sinceridad y sencillez aparentes, renovó el lenguaje lírico en español; sus «Versos sencillos» son célebres en todo el mundo hispánico. Periodista, orador y organizador político incansable, dedicó su vida a la causa de la libertad de Cuba y murió en combate al inicio de la guerra de independencia. Su prosa y su pensamiento sobre América son fundamentales. Une como pocos la palabra y la acción.",
+    obras: ["Versos sencillos", "Ismaelillo", "Versos libres"],
+  },
+  "delmira-agustini": {
+    bio: "Delmira Agustini (1886-1914) fue una poeta uruguaya, una de las voces más audaces y originales del modernismo hispanoamericano. Su poesía, de intensa carga erótica y simbólica, expresó el deseo femenino con una franqueza insólita para su época, dentro de un imaginario de cisnes, fuego y noche. Bajo la superficie modernista latía una sensibilidad profundamente personal y transgresora. Su vida terminó trágicamente, asesinada por su exmarido cuando tenía solo veintisiete años. Pese a la brevedad de su obra, su voz pionera la convirtió en figura fundacional de la poesía escrita por mujeres en América.",
+    obras: ["El libro blanco", "Los cálices vacíos", "Los astros del abismo"],
+  },
+  "alfonsina-storni": {
+    bio: "Alfonsina Storni (1892-1938) fue una de las poetas más importantes de la Argentina y de la lírica hispanoamericana del siglo XX. De origen humilde y trayectoria autodidacta, se abrió camino como maestra y escritora en un medio dominado por hombres. Su poesía, inicialmente posmodernista, cuestionó con lucidez e ironía los mandatos sobre la mujer y exploró el amor, el deseo y la independencia femenina. Su obra evolucionó hacia un lenguaje más despojado y vanguardista. Enferma de cáncer, se quitó la vida adentrándose en el mar, gesto que pasó a la leyenda. Es figura central del feminismo literario.",
+    obras: ["El dulce daño", "Languidez", "Mascarilla y trébol"],
+  },
+  "nicanor-parra": {
+    bio: "Nicanor Parra (1914-2018), chileno, fue el creador de la «antipoesía», una de las propuestas más influyentes de la poesía hispanoamericana del siglo XX. Físico y matemático de formación, propuso bajar la poesía del pedestal: desmontó la solemnidad lírica con humor, ironía, lenguaje coloquial y un escepticismo demoledor. Sus «Poemas y antipoemas» marcaron un antes y un después. Su obra, lúcida y corrosiva, dialoga con la cultura popular y la ciencia. Longevo y provocador hasta el final, recibió el Premio Cervantes en 2011. Su influencia sobre las generaciones posteriores fue inmensa.",
+    obras: ["Poemas y antipoemas", "Artefactos", "Versos de salón"],
+  },
+  "juan-gelman": {
+    bio: "Juan Gelman (1930-2014) es uno de los grandes poetas argentinos del siglo XX. Su obra une la ternura y el coloquialismo con la experimentación del lenguaje y un hondo compromiso político y humano. Militante, sufrió en carne propia la represión de la dictadura argentina: su hijo y su nuera fueron desaparecidos, y dedicó años a buscar a su nieta, recuperada finalmente. El exilio y el duelo atraviesan una poesía que, sin embargo, nunca renuncia al amor ni a la esperanza. Recibió el Premio Cervantes en 2007. Su voz, dolorida y luminosa, es un referente ético y poético.",
+    obras: ["Violín y otras cuestiones", "Cólera buey", "Carta a mi madre"],
+  },
+  "jose-emilio-pacheco": {
+    bio: "José Emilio Pacheco (1939-2014) fue un poeta, narrador y ensayista mexicano, una de las voces más respetadas de la literatura en español. Su poesía, de aparente claridad y tono reflexivo, medita sobre el tiempo, la destrucción, la historia y la fragilidad de lo humano, a menudo con una mirada irónica y desencantada. Cultivó también la prosa, con la célebre novela breve «Las batallas en el desierto». De erudición discreta y enorme rigor, fue además un gran traductor y divulgador. Recibió el Premio Cervantes en 2009. Su obra une lucidez moral y belleza serena.",
+    obras: ["No me preguntes cómo pasa el tiempo", "Los elementos de la noche", "Las batallas en el desierto"],
+  },
+  "jaime-sabines": {
+    bio: "Jaime Sabines (1926-1999) es uno de los poetas mexicanos más queridos y leídos del siglo XX. Su poesía, de lenguaje directo, coloquial y profundamente emotivo, habla del amor, el deseo, el dolor y la muerte con una cercanía que conecta con un público amplísimo. Huyó de la retórica y el hermetismo para escribir desde la experiencia cotidiana y el cuerpo. Su largo poema «Algo sobre la muerte del mayor Sabines», elegía por su padre, es una de sus obras más conmovedoras. Combinó la escritura con la actividad comercial y política. Su voz humana y desnuda lo hizo un clásico popular.",
+    obras: ["Horal", "Tarumba", "Algo sobre la muerte del mayor Sabines"],
+  },
+  "rosario-castellanos": {
+    bio: "Rosario Castellanos (1925-1974) fue una poeta, narradora y ensayista mexicana, figura pionera del pensamiento feminista en lengua española. Su obra reflexiona con lucidez sobre la condición de la mujer, la cultura indígena de su Chiapas natal y las estructuras de poder. Su poesía, de tono reflexivo e irónico, y su narrativa, comprometida con los marginados, le dieron un lugar central en las letras mexicanas. Fue también docente y diplomática, embajadora en Israel, donde murió en un accidente. Su ensayo y su poesía abrieron camino a generaciones de escritoras. Su voz crítica sigue muy viva.",
+    obras: ["Poesía no eres tú", "Balún Canán", "Mujer que sabe latín"],
+  },
+  "nicolas-guillen": {
+    bio: "Nicolás Guillén (1902-1989) fue el poeta nacional de Cuba y la gran voz de la poesía afroantillana. Integró en su obra el ritmo, el habla y la cultura afrocubana, especialmente el «son», creando una poesía musical y popular con honda dimensión social. Denunció el racismo, la desigualdad y el imperialismo, y reivindicó con orgullo la herencia mulata de Cuba. Militante comunista, su obra acompañó los grandes procesos políticos de la isla. De lenguaje vivo y contagioso, su poesía une fiesta y protesta, raíz africana y conciencia americana. Es figura central de la identidad cultural cubana.",
+    obras: ["Motivos de son", "Sóngoro cosongo", "West Indies Ltd."],
+  },
+  "carlos-drummond-de-andrade": {
+    bio: "Carlos Drummond de Andrade (1902-1987) está considerado el mayor poeta brasileño del siglo XX. Vinculado al modernismo de su país, desarrolló una voz inconfundible: irónica, reflexiva y a la vez profundamente humana. Su poesía parte de lo cotidiano y del «yo» para abrirse a la meditación sobre el mundo, la sociedad, el tiempo y la existencia. Funcionario discreto durante décadas, observó su época con lucidez crítica y humor melancólico. De lenguaje aparentemente sencillo y honda complejidad, su obra es un referente absoluto de la lengua portuguesa. Su influencia en la poesía brasileña es total.",
+    obras: ["Sentimiento del mundo", "La rosa del pueblo", "Claro enigma"],
+  },
+  "joao-cabral-de-melo-neto": {
+    bio: "João Cabral de Melo Neto (1920-1999) es uno de los grandes poetas brasileños del siglo XX, célebre por el rigor y la precisión casi arquitectónica de su obra. Frente al lirismo efusivo, propuso una poesía cerebral, despojada y constructiva, atenta a la materia y a la forma como un ingeniero o un arquitecto. Su obra mayor, «Muerte y vida severina», es un auto popular sobre el drama del campesino del Nordeste brasileño, de enorme fuerza social. Diplomático de carrera, vivió en España, que dejó huella en su obra. Su poética del control y la sequedad lo hizo inconfundible.",
+    obras: ["Muerte y vida severina", "El ingeniero", "Educación por la piedra"],
+  },
+  "charles-bukowski": {
+    bio: "Charles Bukowski (1920-1994) fue un escritor estadounidense, figura emblemática del llamado «realismo sucio». De origen alemán y vida marcada por la pobreza, el alcohol y los empleos precarios, hizo de esa experiencia el material de su obra. Su poesía y su narrativa, de lenguaje crudo, directo y antiliterario, retratan los márgenes de la vida urbana: bares, hipódromos, soledad y desencanto, no sin un humor áspero y cierta ternura oculta. Alcanzó tardío y enorme éxito, sobre todo entre lectores ajenos a la poesía convencional. Su voz desencantada lo convirtió en un fenómeno de culto.",
+    obras: ["El amor es un perro del infierno", "Cartero", "La gente parece flores al fin"],
+  },
+  "mary-oliver": {
+    bio: "Mary Oliver (1935-2019) fue una de las poetas estadounidenses más leídas de las últimas décadas. Su obra, arraigada en la observación atenta del mundo natural, celebra la naturaleza como vía de asombro, atención y conexión espiritual. De lenguaje claro y luminoso, sus poemas invitan a habitar el presente y a maravillarse ante lo vivo. Influida por la tradición de Whitman y de los trascendentalistas, paseaba diariamente por los bosques y marismas que inspiran su poesía. Reservada con su vida privada, alcanzó una popularidad inmensa. Su obra ofrece consuelo y celebración a millones de lectores.",
+    obras: ["Primitivo americano", "Trabajo del sueño", "Devociones"],
+  },
+  "langston-hughes": {
+    bio: "Langston Hughes (1902-1967) fue una figura central del «Renacimiento de Harlem», el florecimiento cultural afroamericano de los años veinte. Innovó al incorporar a su poesía el ritmo y la sensibilidad del jazz y del blues, dando voz a la experiencia, el orgullo y las luchas de la comunidad negra estadounidense. De lenguaje accesible y musical, su obra celebra la dignidad de la gente común y denuncia el racismo y la injusticia. Cultivó también la narrativa, el teatro y el ensayo. Su poesía, profundamente popular y comprometida, lo convirtió en una de las grandes voces de la cultura afroamericana.",
+    obras: ["El blues del cansancio", "Montaña de barro", "Pregunta a tu mamá"],
+  },
+  "elizabeth-bishop": {
+    bio: "Elizabeth Bishop (1911-1979) es una de las poetas estadounidenses más admiradas del siglo XX, célebre por la precisión y la contención de su obra. Perfeccionista, publicó relativamente pocos poemas, pero de una factura impecable: descripciones exactas, mirada atenta al detalle y una emoción siempre sugerida bajo una superficie serena. El viaje, la pérdida, el desarraigo y la geografía recorren su obra; vivió muchos años en Brasil. Amiga y corresponsal de grandes poetas de su tiempo, fue reconocida con los principales premios. Su arte de la observación y la reticencia la sitúa entre las grandes.",
+    obras: ["Norte y Sur", "Geografía III", "Cuestiones de viaje"],
+  },
+  "dylan-thomas": {
+    bio: "Dylan Thomas (1914-1953) fue un poeta galés célebre por la exuberancia musical y la intensidad casi incantatoria de su obra. Frente a la poesía intelectual de su tiempo, defendió un lirismo torrencial, sensorial y vital, centrado en los grandes temas del nacimiento, el amor, la naturaleza y la muerte. Sus lecturas en voz alta, de voz poderosa, lo hicieron famoso en giras por Estados Unidos. Su obra teatral radiofónica «Bajo el bosque lácteo» es muy celebrada. Su vida bohemia y excesiva terminó pronto, en Nueva York. Su poesía, intensa y oral, conserva una fuerza arrebatadora.",
+    obras: ["Muertes y entradas", "Dieciocho poemas", "Bajo el bosque lácteo"],
+  },
+  "w-h-auden": {
+    bio: "W. H. Auden (1907-1973) es uno de los mayores poetas en lengua inglesa del siglo XX. Nacido en Inglaterra y nacionalizado estadounidense, fue la voz central de su generación. Su obra, de extraordinaria amplitud temática y maestría formal, combina la inteligencia, la ironía y la reflexión moral, política y religiosa sobre un siglo convulso. Dominó como pocos las formas tradicionales y los registros más diversos. Algunos de sus poemas, como su elegía por Yeats o sus versos sobre el amor y la pérdida, son célebres. Su lucidez y su oficio lo convirtieron en un referente ineludible.",
+    obras: ["Otro tiempo", "La edad de la ansiedad", "Escudo de Aquiles"],
+  },
+  "anne-carson": {
+    bio: "Anne Carson (n. 1950) es una poeta y ensayista canadiense, una de las voces más originales e influyentes de la poesía contemporánea. Especialista en lenguas y literatura clásicas, difumina en su obra las fronteras entre poesía, ensayo, traducción y narrativa. Reescribe los mitos griegos desde una mirada actual y entreteje el saber antiguo con la experiencia íntima, el duelo y el amor. Obras como «Autobiografía de rojo» o «La belleza del marido» han alcanzado gran reconocimiento. Su erudición, su ironía y su libertad formal la han convertido en una autora de culto y prestigio internacional.",
+    obras: ["Autobiografía de rojo", "La belleza del marido", "Nox"],
+  },
+  "jose-angel-valente": {
+    bio: "José Ángel Valente (1929-2000) es una de las grandes voces de la poesía española de la segunda mitad del siglo XX y máximo representante de la llamada «poesía del silencio». Su obra, exigente y depurada, concibe el poema como un acto de conocimiento y una tensión hacia lo inefable, en diálogo con la mística y con el pensamiento. De los primeros libros, más ligados a su generación, evolucionó hacia una creciente desnudez y hondura. Fue también un penetrante ensayista y traductor. Vivió largos años fuera de España. Su rigor y su radicalidad lo convirtieron en un referente para la poesía posterior.",
+    obras: ["A modo de esperanza", "Material memoria", "No amanece el cantor"],
+  },
+  "gustavo-adolfo-becquer": {
+    bio: "Gustavo Adolfo Bécquer (1836-1870) es el gran poeta del posromanticismo español y una de las figuras más influyentes de la lírica en castellano. Sevillano, vivió de su trabajo como periodista en una existencia breve, marcada por la precariedad y la enfermedad. Su poesía, recogida en las «Rimas», rompe con la grandilocuencia romántica en favor de un lenguaje intimista, musical y aparentemente sencillo, centrado en el amor, el desengaño, la soledad y el misterio de la poesía misma. Escribió también las «Leyendas», relatos en prosa de atmósfera fantástica. Su obra, en buena parte de fama póstuma, abrió el camino a la poesía moderna y marcó hondamente al 27.",
+    obras: ["Rimas", "Leyendas"],
+  },
+  "tomas-transtromer": {
+    bio: "Tomas Tranströmer (1931-2015) fue el mayor poeta sueco contemporáneo y Premio Nobel de Literatura en 2011. Psicólogo de profesión, construyó una obra breve y depurada, célebre por sus imágenes precisas y reveladoras, a menudo nacidas del contraste entre la naturaleza nórdica y la vida interior. Su poesía, atenta al instante y a los umbrales entre el sueño y la vigilia, alcanza una claridad casi visionaria con muy pocos elementos. Un ictus lo dejó con dificultades para hablar en sus últimos años, pero siguió escribiendo. Traducido a innumerables lenguas, su voz serena y honda tiene resonancia universal.",
+    obras: ["17 poemas", "Bálticos", "El cielo a medio hacer"],
+  },
 };
