@@ -275,4 +275,72 @@ export const BIOS = {
     bio: "Heinrich Heine (1797-1856) fue uno de los grandes poetas alemanes del siglo XIX, en la encrucijada entre el Romanticismo y su crítica irónica. Su «Libro de las canciones» recogió poemas de tono popular y sentimental que fueron musicados innumerables veces. Pero Heine fue también un escritor mordaz, periodista y pensador comprometido, cuya ironía desmontaba la solemnidad romántica. De origen judío y espíritu crítico, vivió gran parte de su vida exiliado en París. Sus últimos años, postrado por la enfermedad, dieron una poesía estremecedora y lúcida.",
     obras: ["Libro de las canciones", "Romancero", "Cuadros de viaje"],
   },
+  "victor-hugo": {
+    bio: "Victor Hugo (1802-1885) fue la gran figura del Romanticismo francés y uno de los escritores más influyentes del siglo XIX. Poeta, novelista y dramaturgo, encarnó como nadie el papel del literato comprometido con su tiempo. Aunque universalmente conocido por novelas como «Los miserables» y «Nuestra Señora de París», su obra poética es vastísima y central en su lengua, desde la lírica intimista hasta la gran poesía visionaria y épica. Defensor de la república, vivió casi dos décadas en el exilio por su oposición a Napoleón III. A su muerte, Francia le rindió funerales de Estado.",
+    obras: ["Las contemplaciones", "La leyenda de los siglos", "Los miserables"],
+  },
+  "gerard-de-nerval": {
+    bio: "Gérard de Nerval (1808-1855) fue un poeta y prosista francés cuya obra anticipó el simbolismo y el surrealismo. Su escritura funde el sueño, el mito, lo esotérico y la memoria en una atmósfera enigmática y musical. Sus sonetos de «Las quimeras» son célebres por su densidad simbólica y su belleza cifrada. En prosa, «Aurélia» explora los límites entre la locura y la visión. Atormentado por crisis mentales, llevó una vida errante y precaria, y murió trágicamente. Su figura, a medio camino entre el romántico tardío y el visionario moderno, fascinó a generaciones posteriores.",
+    obras: ["Las quimeras", "Aurelia", "Las hijas del fuego"],
+  },
+  "paul-verlaine": {
+    bio: "Paul Verlaine (1844-1896) es uno de los grandes poetas del simbolismo francés, maestro de la musicalidad del verso. Su lema «la música ante todo» resume una poesía que busca la sugerencia, la sutileza y los estados de ánimo difusos por encima del sentido preciso. Su tormentosa relación con Rimbaud, que acabó en un disparo y en prisión, es legendaria. Tras una conversión religiosa en la cárcel, alternó la poesía mística con una vida bohemia y desordenada. Su obra, de honda emoción y delicadeza sonora, marcó profundamente la lírica moderna.",
+    obras: ["Romanzas sin palabras", "Fiestas galantes", "Sabiduría"],
+  },
+  "paul-valery": {
+    bio: "Paul Valéry (1871-1945) fue un poeta y pensador francés, heredero tardío del simbolismo de Mallarmé y una de las grandes inteligencias literarias de su tiempo. Tras un largo silencio dedicado a la reflexión, regresó a la poesía con obras de extraordinaria perfección formal e intelectual, como «El cementerio marino». Su poesía une la música del verso con el rigor del pensamiento sobre la conciencia, el tiempo y la creación. Sus cuadernos, escritos durante décadas al amanecer, son un monumento de meditación. Fue una figura intelectual de máximo prestigio en la Francia de entreguerras.",
+    obras: ["El cementerio marino", "La joven Parca", "Cuadernos"],
+  },
+  "guillaume-apollinaire": {
+    bio: "Guillaume Apollinaire (1880-1918) fue un poeta francés decisivo en el nacimiento de la vanguardia. Acuñó el término «surrealismo» y defendió con entusiasmo el cubismo y el arte nuevo. Su poesía rompió con las convenciones: suprimió la puntuación y, en sus «Caligramas», dispuso las palabras formando imágenes visuales sobre la página. Su obra combina la tradición lírica con la audacia formal, la melancolía amorosa con la fascinación por el mundo moderno. Herido en la Primera Guerra Mundial, murió poco después en la pandemia de gripe. Su influencia en la poesía del siglo XX fue enorme.",
+    obras: ["Alcoholes", "Caligramas"],
+  },
+  "w-b-yeats": {
+    bio: "W. B. Yeats (1865-1939) es el mayor poeta irlandés y una figura central de la literatura en lengua inglesa. Su obra evolucionó desde un simbolismo de raíz céltica y esotérica hacia una poesía madura más austera y poderosa, atravesada por la historia de Irlanda, el amor, la vejez y una compleja mitología personal. Fue alma del renacimiento cultural irlandés y cofundador del teatro nacional. Implicado en la vida política de su país, llegó a senador. Recibió el Premio Nobel de Literatura en 1923. Su poesía tardía está considerada una de las cimas del siglo.",
+    obras: ["La torre", "La escalera de caracol", "Responsabilidades"],
+  },
+  "ezra-pound": {
+    bio: "Ezra Pound (1885-1972) fue un poeta estadounidense y uno de los grandes promotores del modernismo literario. Impulsor del «imaginismo», abogó por una poesía concentrada, precisa y libre de retórica, y ejerció una influencia decisiva como editor y mentor de autores como Eliot. Su obra mayor, los «Cantos», es un vasto e inacabado poema que entreteje historia, economía, mito y múltiples lenguas. Su trayectoria quedó ensombrecida por su apoyo al fascismo de Mussolini durante la guerra, que le valió años de reclusión. Su renovación del lenguaje poético, sin embargo, fue capital.",
+    obras: ["Cantos", "Hugh Selwyn Mauberley"],
+  },
+  "wallace-stevens": {
+    bio: "Wallace Stevens (1879-1955) es uno de los grandes poetas estadounidenses del siglo XX, célebre por una obra de exuberancia verbal y hondura filosófica. Llevó una doble vida singular: alto ejecutivo de una compañía de seguros y, a la vez, poeta de refinada imaginación. Su poesía medita una y otra vez sobre la relación entre la imaginación y la realidad, sobre el poder del arte para dar forma a un mundo sin certezas religiosas. De aparente abstracción y rica sensorialidad, su obra ganó reconocimiento sobre todo en su madurez. Hoy se le considera un clásico moderno.",
+    obras: ["Harmonium", "Las auroras de otoño", "El hombre de la guitarra azul"],
+  },
+  "william-carlos-williams": {
+    bio: "William Carlos Williams (1883-1963) fue un poeta estadounidense que buscó una poesía radicalmente arraigada en lo cotidiano, lo concreto y el habla americana. Médico de profesión durante toda su vida, escribió entre paciente y paciente. Su lema «no hay ideas sino en las cosas» resume su atención a lo material y lo inmediato, frente al cosmopolitismo erudito de otros modernistas. Su obra mayor, «Paterson», hace de una ciudad de Nueva Jersey una épica moderna. Su voz directa y su verso flexible influyeron decisivamente en la poesía estadounidense de posguerra.",
+    obras: ["Paterson", "Cuadros de Brueghel", "La música del desierto"],
+  },
+  "e-e-cummings": {
+    bio: "E. E. Cummings (1894-1962) fue un poeta estadounidense célebre por su radical experimentación tipográfica y gramatical. Fragmentó palabras, prescindió de mayúsculas, dispersó el texto por la página y reinventó la puntuación para crear una poesía visual y rítmica de gran originalidad. Bajo esa apariencia vanguardista late, sin embargo, un lirismo tradicional: el amor, la naturaleza, la celebración del individuo frente a la masa. Pintor además de poeta, concebía el poema también como objeto visual. Su obra, lúdica y tierna a la vez, lo hizo enormemente popular.",
+    obras: ["Tulipanes y chimeneas", "XLI poemas", "95 poemas"],
+  },
+  "robert-frost": {
+    bio: "Robert Frost (1874-1963) es uno de los poetas estadounidenses más leídos y queridos del siglo XX. Su poesía, ambientada en los paisajes rurales de Nueva Inglaterra, emplea un lenguaje claro y un tono coloquial que esconden una notable profundidad y ambigüedad. Bajo la aparente sencillez de sus escenas campestres laten meditaciones sobre la elección, el aislamiento, el deber y la muerte. Recibió cuatro veces el Premio Pulitzer y se convirtió en una figura nacional, hasta recitar en la investidura presidencial de Kennedy. Su obra une la tradición y una honda complejidad moderna.",
+    obras: ["Al norte de Boston", "El camino no elegido", "Intervalo en la montaña"],
+  },
+  "giuseppe-ungaretti": {
+    bio: "Giuseppe Ungaretti (1888-1970) fue uno de los renovadores de la poesía italiana del siglo XX y figura clave del «hermetismo». Nacido en Alejandría, su experiencia como soldado en la Primera Guerra Mundial dio origen a una poesía esencial y desnuda, de versos brevísimos cargados de silencio, que buscaban la palabra pura en medio del horror. Su obra fue depurando el lenguaje hasta lo mínimo, atenta al instante y a la fragilidad de la existencia. Profesor y traductor, ejerció gran influencia sobre la lírica italiana posterior. Su brevedad intensa es su sello inconfundible.",
+    obras: ["La alegría", "Sentimiento del tiempo", "El dolor"],
+  },
+  "eugenio-montale": {
+    bio: "Eugenio Montale (1896-1981) es uno de los mayores poetas italianos del siglo XX y figura central del hermetismo, aunque su voz desbordó toda etiqueta. Su poesía parte del paisaje árido y luminoso de Liguria para construir una meditación desencantada sobre la dificultad de vivir y la imposibilidad de certezas. De lenguaje preciso y simbolismo sutil, su obra evolucionó hacia un tono más irónico y cotidiano. Fue también crítico, periodista y traductor. Recibió el Premio Nobel de Literatura en 1975. Su «correlato objetivo» y su rigor lo sitúan entre los clásicos modernos.",
+    obras: ["Huesos de sepia", "Las ocasiones", "Diario del 71 y del 72"],
+  },
+  "osip-mandelshtam": {
+    bio: "Osip Mandelshtam (1891-1938) es uno de los grandes poetas rusos del siglo XX y figura central del acmeísmo, que defendía la claridad, la cultura y el valor preciso de la palabra. Su poesía, densa y luminosa, dialoga con la tradición clásica europea y con la historia. Bajo el estalinismo, su independencia lo condenó: un poema satírico contra Stalin desencadenó su persecución, el destierro y finalmente la muerte en un campo de tránsito en Siberia. Su viuda, Nadiezhda, salvó su obra memorizándola. Hoy es símbolo de la poesía frente a la tiranía.",
+    obras: ["La piedra", "Tristia", "Cuadernos de Voronezh"],
+  },
+  "vladimir-mayakovski": {
+    bio: "Vladímir Mayakovski (1893-1930) fue el poeta más emblemático del futurismo ruso y de la vanguardia revolucionaria. Su voz potente, declamatoria y rupturista llevó la poesía a la calle, a los carteles y a la propaganda, al servicio de la Revolución de Octubre, que abrazó con entusiasmo. Renovó la métrica, el lenguaje y la tipografía, e hizo del poema un acto público y combativo. Cultivó también una intensa poesía amorosa. La creciente decepción con la burocracia soviética y sus conflictos personales lo llevaron al suicidio. Su obra encarna la fusión radical de arte y revolución.",
+    obras: ["La nube en pantalones", "150.000.000", "A plena voz"],
+  },
+  "czes-aw-mi-osz": {
+    bio: "Czesław Miłosz (1911-2004) fue un poeta polaco, una de las grandes conciencias literarias del siglo XX. Testigo de la ocupación nazi de Varsovia y luego del régimen estalinista, del que acabó exiliándose, hizo de la memoria histórica, el mal del siglo y la búsqueda de sentido los ejes de su obra. Su ensayo «El pensamiento cautivo» analizó la seducción del totalitarismo sobre los intelectuales. Su poesía, lúcida y meditativa, une lo concreto y lo metafísico. Profesor en Estados Unidos, recibió el Premio Nobel de Literatura en 1980. Su voz es un referente moral.",
+    obras: ["El pensamiento cautivo", "Tierra inalcanzable", "Rescate"],
+  },
+  "yorgos-seferis": {
+    bio: "Yorgos Seferis (1900-1971) fue el gran renovador de la poesía griega moderna y el primer griego en recibir el Premio Nobel de Literatura, en 1963. Diplomático de carrera, unió en su obra la herencia de la Grecia clásica con la sensibilidad del modernismo europeo. Su poesía, de tono sobrio y melancólico, está marcada por el exilio, el mar, la memoria histórica y el peso de un pasado mítico sobre el presente. Tradujo a Eliot al griego y dialogó con la tradición occidental. Su voz dio a la lengua griega contemporánea una dimensión universal.",
+    obras: ["Mythistórima", "Diario de a bordo", "Tres poemas secretos"],
+  },
 };
