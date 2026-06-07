@@ -475,6 +475,7 @@ export default function App() {
   const [stats, setStats] = useState(null);
   const [statsLoading, setStatsLoading] = useState(false);
   const [authorId, setAuthorId] = useState(null);
+  const [authorBack, setAuthorBack] = useState("gallery");
 
   /* fuentes */
   useEffect(() => {
@@ -597,7 +598,7 @@ export default function App() {
       {screen === "intro" && <Intro onStart={startVoting} onStats={loadStats} total={total} />}
       {screen === "vote" && (
         poet ? (
-          <Vote poet={poet} val={val} setVal={setVal} onSubmit={submitVote} info={info} total={total} />
+          <Vote poet={poet} val={val} setVal={setVal} onSubmit={submitVote} info={info} total={total} onAuthor={(id) => { setAuthorId(id); setAuthorBack("vote"); setScreen("autor"); }} />
         ) : (
           <Done onStats={loadStats} />
         )
@@ -606,8 +607,8 @@ export default function App() {
         <BatchResult data={batchClosed} onContinue={() => { nextPoet(); setScreen("vote"); }} nextGoal={batchInfo(total).goal} />
       )}
       {screen === "stats" && <Stats rows={stats} loading={statsLoading} onBack={() => setScreen(poet ? "vote" : "intro")} />}
-      {screen === "gallery" && <Gallery onBack={() => setScreen(poet ? "vote" : "intro")} onSelect={(id) => { setAuthorId(id); setScreen("autor"); }} />}
-      {screen === "autor" && <AuthorScreen id={authorId} onBack={() => setScreen("gallery")} />}
+      {screen === "gallery" && <Gallery onBack={() => setScreen(poet ? "vote" : "intro")} onSelect={(id) => { setAuthorId(id); setAuthorBack("gallery"); setScreen("autor"); }} />}
+      {screen === "autor" && <AuthorScreen id={authorId} onBack={() => setScreen(authorBack || "gallery")} backLabel={authorBack === "vote" ? "← Volver a la votación" : "← Volver a autores"} />}
     </Shell>
   );
 }
@@ -848,7 +849,7 @@ function InstallModal({ kind, onClose }) {
 }
 
 /* ---------- votación ---------- */
-function Vote({ poet, val, setVal, onSubmit, info, total }) {
+function Vote({ poet, val, setVal, onSubmit, info, total, onAuthor }) {
   const mob = useIsMobile();
   const onCh = (k, v) => setVal((s) => ({ ...s, [k]: v }));
   const others = { r: val.r, g: val.g, b: val.b, a: val.a };
@@ -864,11 +865,16 @@ function Vote({ poet, val, setVal, onSubmit, info, total }) {
       <div style={{ display: "grid", gridTemplateColumns: mob ? "1fr" : "320px 1fr", gap: mob ? 20 : 30, alignItems: "start" }}>
         {/* retrato + ficha viva */}
         <div style={mob ? { maxWidth: 300, width: "100%", margin: "0 auto" } : undefined}>
-          <div style={{ border: `1px solid ${INK}`, background: PAPER }}>
+          <div onClick={() => onAuthor && onAuthor(poet.id)} style={{ border: `1px solid ${INK}`, background: PAPER, cursor: onAuthor ? "pointer" : "default" }}>
             <Avatar seed={poet.id} size={mob ? "100%" : 318} />
             <div style={{ borderTop: `1px solid ${INK}`, padding: "12px 14px" }}>
               <div style={{ fontFamily: DISP, fontWeight: 900, fontSize: 22, lineHeight: 1, textTransform: "uppercase", letterSpacing: ".01em" }}>{poet.name}</div>
               <div style={{ fontFamily: MONO, fontSize: 12, color: "#6b6450", marginTop: 5 }}>{poet.note} · {poet.years}</div>
+              {onAuthor && (
+                <div style={{ fontFamily: MONO, fontSize: 11, color: BLUE, marginTop: 9, textDecoration: "underline", textUnderlineOffset: 2 }}>
+                  ¿no lo conoces? ver biografía →
+                </div>
+              )}
             </div>
           </div>
         </div>
@@ -1027,7 +1033,7 @@ function Gallery({ onBack, onSelect }) {
 }
 
 /* ---------- ficha de autor ---------- */
-function AuthorScreen({ id, onBack }) {
+function AuthorScreen({ id, onBack, backLabel = "← Volver a autores" }) {
   const mob = useIsMobile();
   const poet = POET_BY_ID[id];
   const ficha = BIOS[id];
@@ -1062,7 +1068,7 @@ function AuthorScreen({ id, onBack }) {
   return (
     <main style={{ padding: "30px 0" }}>
       <div style={{ marginBottom: 18 }}>
-        <button onClick={onBack} style={{ ...BTN_GHOST, fontSize: 11, padding: "8px 12px" }}>← Volver a autores</button>
+        <button onClick={onBack} style={{ ...BTN_GHOST, fontSize: 11, padding: "8px 12px" }}>{backLabel}</button>
       </div>
 
       <div style={{ display: "grid", gridTemplateColumns: mob ? "1fr" : "200px 1fr", gap: mob ? 18 : 24, alignItems: "start" }}>
