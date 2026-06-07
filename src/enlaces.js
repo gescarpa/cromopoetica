@@ -43,4 +43,16 @@ export const ENLACES = {
   "rainer-maria-rilke": "https://materialdelectura.unam.mx/poesia-moderna/16-poesia-moderna-cat/119-052-rainer-maria-rilke",
   "constantino-cavafis": "https://materialdelectura.unam.mx/poesia-moderna/16-poesia-moderna-cat/62-025-cavafis",
   "fernando-pessoa": "https://materialdelectura.unam.mx/poesia-moderna/16-poesia-moderna-cat/25-004-fernando-pessoa",
+
+  // --- TANDA 4 ---
+  "anna-ajmatova": "https://materialdelectura.unam.mx/poesia-moderna/16-poesia-moderna-cat/80-034-ana-ajmatova",
+  "marina-tsvetaieva": "https://www.zendalibros.com/5-poemas-de-marina-tsvetaieva/",
+  "t-s-eliot": "https://materialdelectura.unam.mx/poesia-moderna/16-poesia-moderna-cat/52-018-ts-eliot",
+  "cesar-vallejo": "https://www.zendalibros.com/5-poemas-cesar-vallejo/",
+  "vicente-huidobro": "https://materialdelectura.unam.mx/poesia-moderna/16-poesia-moderna-cat/104-043-vicente-huidobro",
+  "federico-garcia-lorca": "https://www.culturagenial.com/es/poemas-esenciales-de-federico-garcia-lorca/",
+  "pablo-neruda": "https://www.culturagenial.com/es/pablo-neruda-los-poemas-mas-populares/",
+  "gabriela-mistral": "https://materialdelectura.unam.mx/poesia-moderna/16-poesia-moderna-cat/144-065-gabriela-mistral",
+  "jorge-luis-borges": "https://www.culturagenial.com/es/borges-poemas/",
+  "jose-lezama-lima": "https://materialdelectura.unam.mx/poesia-moderna/16-poesia-moderna-cat/26-005-jose-lezama-lima",
 };
