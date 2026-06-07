@@ -55,4 +55,16 @@ export const ENLACES = {
   "gabriela-mistral": "https://materialdelectura.unam.mx/poesia-moderna/16-poesia-moderna-cat/144-065-gabriela-mistral",
   "jorge-luis-borges": "https://www.culturagenial.com/es/borges-poemas/",
   "jose-lezama-lima": "https://materialdelectura.unam.mx/poesia-moderna/16-poesia-moderna-cat/26-005-jose-lezama-lima",
+
+  // --- TANDA 5 ---
+  "octavio-paz": "https://materialdelectura.unam.mx/poesia-moderna/16-poesia-moderna-cat/85-octavio-paz",
+  "paul-celan": "https://circulodepoesia.com/2017/10/paul-celan-los-poemas-rumanos/",
+  "wis-awa-szymborska": "https://www.zendalibros.com/5-poemas-de-wislawa-szymborska/",
+  "alejandra-pizarnik": "https://materialdelectura.unam.mx/poesia-moderna/16-poesia-moderna-cat/194-093-alejandra-pizarnik",
+  "sylvia-plath": "https://www.zendalibros.com/5-poemas-de-sylvia-plath-navona/",
+  "allen-ginsberg": "https://www.zendalibros.com/5-poemas-allen-ginsberg/",
+  "idea-vilarino": "https://materialdelectura.unam.mx/poesia-moderna/16-poesia-moderna-cat/308-153-idea-vilarino",
+  "blanca-varela": "https://www.vallejoandcompany.com/2016/08/19/ese-viento-alevoso-de-la-memoria-13-poemas-de-blanca-varela/",
+  "mahmud-darwish": "https://circulodepoesia.com/2023/11/poemas-de-mahmoud-darwish/",
+  "olga-orozco": "https://circulodepoesia.com/2019/08/poesia-panhispanica-no-24-olga-orozco/",
 };
