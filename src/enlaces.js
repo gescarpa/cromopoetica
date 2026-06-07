@@ -67,4 +67,16 @@ export const ENLACES = {
   "blanca-varela": "https://www.vallejoandcompany.com/2016/08/19/ese-viento-alevoso-de-la-memoria-13-poemas-de-blanca-varela/",
   "mahmud-darwish": "https://circulodepoesia.com/2023/11/poemas-de-mahmoud-darwish/",
   "olga-orozco": "https://circulodepoesia.com/2019/08/poesia-panhispanica-no-24-olga-orozco/",
+
+  // --- TANDA 6 ---
+  "virgilio": "https://circulodepoesia.com/2019/09/virgilio-a-2000-anos-de-su-muerte/",
+  "horacio": "https://poeticas.es/?p=2723",
+  "ovidio": "https://circulodepoesia.com/2019/08/ovidio-tristes/",
+  "catulo": "https://poesiamaspoesia.com/75-poesia-mas-poesia-catulo/",
+  "wang-wei": "https://poesiamaspoesia.com/228-poesia-mas-poesia-wang-wei/",
+  "li-qingzhao": "https://poesiamaspoesia.com/253-poesia-mas-poesia-li-qingzhao/",
+  "hafez": "https://circulodepoesia.com/2013/01/un-poema-de-hafiz/",
+  "kabir": "http://amediavoz.com/kabir.htm",
+  "mirabai": "https://institutodeindologia.es/index.php/articulos/literatura/558-poemas-mirabai",
+  "jorge-manrique": "http://amediavoz.com/manrique.htm",
 };
