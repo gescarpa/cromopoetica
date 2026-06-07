@@ -453,6 +453,17 @@ function batchInfo(total) {
 }
 
 /* ============================================================ */
+function useIsMobile(bp = 720) {
+  const [m, setM] = useState(typeof window !== "undefined" ? window.innerWidth <= bp : false);
+  useEffect(() => {
+    const onR = () => setM(window.innerWidth <= bp);
+    window.addEventListener("resize", onR);
+    onR();
+    return () => window.removeEventListener("resize", onR);
+  }, [bp]);
+  return m;
+}
+
 export default function App() {
   const [screen, setScreen] = useState("intro"); // intro | vote | batch | stats
   const [ready, setReady] = useState(false);
@@ -648,6 +659,7 @@ Escribe un comentario en español, lírico y culto, de entre 300 y 450 palabras,
 
 /* ---------- contenedor / cabecera ---------- */
 function Shell({ children, screen, setScreen, onStats, total }) {
+  const mob = useIsMobile();
   return (
     <div style={{
       minHeight: "100vh", background: PAPER, color: INK, fontFamily: BODY,
@@ -656,12 +668,12 @@ function Shell({ children, screen, setScreen, onStats, total }) {
     }}>
       <div style={{ maxWidth: 1080, margin: "0 auto", padding: "0 18px" }}>
         {setScreen && (
-          <header style={{ display: "flex", alignItems: "center", justifyContent: "space-between", borderBottom: `2px solid ${INK}`, padding: "16px 0", background: PAPER }}>
+          <header style={{ display: "flex", flexDirection: mob ? "column" : "row", alignItems: mob ? "stretch" : "center", justifyContent: "space-between", gap: mob ? 10 : 0, borderBottom: `2px solid ${INK}`, padding: "16px 0", background: PAPER }}>
             <div style={{ display: "flex", alignItems: "center", gap: 12, cursor: "pointer" }} onClick={() => setScreen("intro")}>
               <svg width="26" height="26" viewBox="0 0 26 26"><rect width="26" height="26" fill={RED} /><circle cx="13" cy="13" r="9" fill={BLUE} /><path d="M4 13 A9 9 0 0 1 22 13 Z" fill={YEL} /></svg>
               <span style={{ fontFamily: DISP, fontWeight: 900, letterSpacing: ".14em", fontSize: 18, textTransform: "uppercase" }}>Cromopoética</span>
             </div>
-            <nav style={{ display: "flex", gap: 8, alignItems: "center" }}>
+            <nav style={{ display: "flex", gap: 8, alignItems: "center", flexWrap: "wrap" }}>
               <span style={{ fontFamily: MONO, fontSize: 11, color: "#6b6450", marginRight: 4 }}>has completado {total} fichas</span>
               <button onClick={() => setScreen("gallery")} style={{ ...BTN_GHOST, fontSize: 11, padding: "8px 12px" }}>Autores</button>
               <button onClick={onStats} style={{ ...BTN_GHOST, fontSize: 11, padding: "8px 12px" }}>Pantonario público</button>
@@ -682,11 +694,12 @@ function Shell({ children, screen, setScreen, onStats, total }) {
 
 /* ---------- intro ---------- */
 function Intro({ onStart, onStats, total }) {
+  const mob = useIsMobile();
   return (
-    <main style={{ padding: "44px 0" }}>
-      <div style={{ display: "grid", gridTemplateColumns: "1.4fr 1fr", gap: 36, alignItems: "center" }}>
+    <main style={{ padding: mob ? "28px 0" : "44px 0" }}>
+      <div style={{ display: "grid", gridTemplateColumns: mob ? "1fr" : "1.4fr 1fr", gap: mob ? 24 : 36, alignItems: "center" }}>
         <div>
-          <h1 style={{ fontFamily: DISP, fontWeight: 900, fontSize: 52, lineHeight: .98, letterSpacing: "-.01em", margin: "0 0 18px", textTransform: "uppercase" }}>
+          <h1 style={{ fontFamily: DISP, fontWeight: 900, fontSize: mob ? 38 : 52, lineHeight: .98, letterSpacing: "-.01em", margin: "0 0 18px", textTransform: "uppercase" }}>
             Un pantonario<br />de la poesía
           </h1>
           <p style={{ fontSize: 16, lineHeight: 1.55, maxWidth: 520, margin: "0 0 14px" }}>
@@ -708,7 +721,7 @@ function Intro({ onStart, onStats, total }) {
         </div>
       </div>
 
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 14, marginTop: 40 }}>
+      <div style={{ display: "grid", gridTemplateColumns: mob ? "repeat(2,1fr)" : "repeat(4,1fr)", gap: 14, marginTop: 40 }}>
         {AXES.map((ax) => {
           const fullCol = ax.col;
           const zeroCol = ax.key === "a" ? "#D8CFB8" : INK;
@@ -730,8 +743,8 @@ function Intro({ onStart, onStats, total }) {
         })}
       </div>
 
-      <div style={{ marginTop: 40, border: `1px solid ${INK}`, background: PAPER, display: "grid", gridTemplateColumns: "210px 1fr" }}>
-        <div style={{ borderRight: `1px solid ${INK}`, background: PAPER2, display: "flex", alignItems: "center", justifyContent: "center", padding: 16 }}>
+      <div style={{ marginTop: 40, border: `1px solid ${INK}`, background: PAPER, display: "grid", gridTemplateColumns: mob ? "1fr" : "210px 1fr" }}>
+        <div style={{ borderRight: mob ? "none" : `1px solid ${INK}`, borderBottom: mob ? `1px solid ${INK}` : "none", background: PAPER2, display: "flex", alignItems: "center", justifyContent: "center", padding: 16 }}>
           <svg viewBox="0 0 240 168" width="100%" style={{ maxWidth: 200, display: "block" }}>
             {["#C0392B", "#D8622E", "#D9A521", "#3E6B57", "#2C7C82", "#2E4A7D", "#7C5C8A"].map((c, i, arr) => {
               const ang = -52 + i * (104 / (arr.length - 1));
@@ -836,6 +849,7 @@ function InstallModal({ kind, onClose }) {
 
 /* ---------- votación ---------- */
 function Vote({ poet, val, setVal, onSubmit, info, total }) {
+  const mob = useIsMobile();
   const onCh = (k, v) => setVal((s) => ({ ...s, [k]: v }));
   const others = { r: val.r, g: val.g, b: val.b, a: val.a };
   return (
@@ -847,11 +861,11 @@ function Vote({ poet, val, setVal, onSubmit, info, total }) {
         <span style={{ fontFamily: MONO, fontSize: 12, color: "#6b6450" }}>FICHA Nº {pad(total + 1, 3)}</span>
       </div>
 
-      <div style={{ display: "grid", gridTemplateColumns: "320px 1fr", gap: 30, alignItems: "start" }}>
+      <div style={{ display: "grid", gridTemplateColumns: mob ? "1fr" : "320px 1fr", gap: mob ? 20 : 30, alignItems: "start" }}>
         {/* retrato + ficha viva */}
-        <div>
+        <div style={mob ? { maxWidth: 300, width: "100%", margin: "0 auto" } : undefined}>
           <div style={{ border: `1px solid ${INK}`, background: PAPER }}>
-            <Avatar seed={poet.id} size={318} />
+            <Avatar seed={poet.id} size={mob ? "100%" : 318} />
             <div style={{ borderTop: `1px solid ${INK}`, padding: "12px 14px" }}>
               <div style={{ fontFamily: DISP, fontWeight: 900, fontSize: 22, lineHeight: 1, textTransform: "uppercase", letterSpacing: ".01em" }}>{poet.name}</div>
               <div style={{ fontFamily: MONO, fontSize: 12, color: "#6b6450", marginTop: 5 }}>{poet.note} · {poet.years}</div>
@@ -861,13 +875,13 @@ function Vote({ poet, val, setVal, onSubmit, info, total }) {
 
         {/* sliders */}
         <div>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 168px", gap: 22, alignItems: "start" }}>
+          <div style={{ display: "grid", gridTemplateColumns: mob ? "1fr" : "1fr 168px", gap: 22, alignItems: "start" }}>
             <div>
               {AXES.map((ax) => (
                 <Channel key={ax.key} axis={ax} value={val[ax.key]} others={others} onChange={onCh} />
               ))}
             </div>
-            <div style={{ position: "sticky", top: 10 }}>
+            <div style={{ position: mob ? "static" : "sticky", top: 10, maxWidth: mob ? 220 : "none" }}>
               <Chip r={val.r} g={val.g} b={val.b} a={val.a} name={colorName(val.r, val.g, val.b)} note="vista previa" height={150} />
             </div>
           </div>
@@ -904,7 +918,7 @@ function BatchResult({ data, onContinue, nextGoal }) {
         )}
       </div>
 
-      <div style={{ marginTop: 22, display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+      <div style={{ marginTop: 22, display: "flex", flexWrap: "wrap", gap: 12, justifyContent: "space-between", alignItems: "center" }}>
         <span style={{ fontFamily: MONO, fontSize: 12, color: "#6b6450" }}>Siguiente tanda: {nextGoal} autores</span>
         <button onClick={onContinue} style={BTN}>Continuar el pantonario</button>
       </div>
@@ -1014,6 +1028,7 @@ function Gallery({ onBack, onSelect }) {
 
 /* ---------- ficha de autor ---------- */
 function AuthorScreen({ id, onBack }) {
+  const mob = useIsMobile();
   const poet = POET_BY_ID[id];
   const ficha = BIOS[id];
   const [media, setMedia] = useState(undefined); // undefined=cargando · null=sin votos · {r,g,b,a,n}=ok
@@ -1050,8 +1065,8 @@ function AuthorScreen({ id, onBack }) {
         <button onClick={onBack} style={{ ...BTN_GHOST, fontSize: 11, padding: "8px 12px" }}>← Volver a autores</button>
       </div>
 
-      <div style={{ display: "grid", gridTemplateColumns: "200px 1fr", gap: 24, alignItems: "start" }}>
-        <div>
+      <div style={{ display: "grid", gridTemplateColumns: mob ? "1fr" : "200px 1fr", gap: mob ? 18 : 24, alignItems: "start" }}>
+        <div style={mob ? { maxWidth: 240 } : undefined}>
           <div style={{ border: `1px solid ${INK}` }}>
             <Avatar seed={id} size="100%" />
           </div>
