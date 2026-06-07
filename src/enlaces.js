@@ -31,4 +31,16 @@ export const ENLACES = {
   "giacomo-leopardi": "https://www.zendalibros.com/poemas-giacomo-leopardi/",
   "walt-whitman": "https://www.zendalibros.com/5-poemas-walt-whitman/",
   "emily-dickinson": "https://www.zendalibros.com/5-poemas-de-emily-dickinson-71-poemas/",
+
+  // --- TANDA 3 ---
+  "charles-baudelaire": "https://www.zendalibros.com/poemas-de-las-flores-del-mal-de-charles-baudelaire/",
+  "arthur-rimbaud": "https://circulodepoesia.com/2016/10/poesia-francesa-arthur-rimbaud/",
+  "stephane-mallarme": "https://materialdelectura.unam.mx/poesia-moderna/16-poesia-moderna-cat/64-027-stephane-mallarme",
+  "rosalia-de-castro": "https://www.culturagenial.com/es/rosalia-de-castro-poemas/",
+  "ruben-dario": "https://www.culturagenial.com/es/ruben-dario-poemas/",
+  "antonio-machado": "https://www.culturagenial.com/es/antonio-machado-poemas/",
+  "juan-ramon-jimenez": "https://materialdelectura.unam.mx/poesia-moderna/16-poesia-moderna-cat/331-181-juan-ramon-jimenez",
+  "rainer-maria-rilke": "https://materialdelectura.unam.mx/poesia-moderna/16-poesia-moderna-cat/119-052-rainer-maria-rilke",
+  "constantino-cavafis": "https://materialdelectura.unam.mx/poesia-moderna/16-poesia-moderna-cat/62-025-cavafis",
+  "fernando-pessoa": "https://materialdelectura.unam.mx/poesia-moderna/16-poesia-moderna-cat/25-004-fernando-pessoa",
 };
