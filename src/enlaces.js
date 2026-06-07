@@ -1,10 +1,10 @@
 // ===========================================================================
 // ENLACES A POEMAS — Cromopoética
 // Mapa: id (slug) del autor -> URL a una web en español con sus poemas.
-// Crear este archivo como src/enlaces.js
-// Fuentes verificadas y limpias (Ciudad Seva, Círculo de Poesía).
-// Se irá ampliando por tandas. Los autores sin entrada simplemente no
-// mostrarán el botón "Ver poemas".
+// Crear/actualizar como src/enlaces.js (reemplaza el archivo entero).
+// Fuentes priorizadas por diseño y fiabilidad: Zenda, Círculo de Poesía,
+// Cultura Genial. Ciudad Seva solo donde no hay alternativa limpia mejor.
+// Los autores sin entrada no muestran el botón "Ver poemas".
 // ===========================================================================
 
 export const ENLACES = {
@@ -12,11 +12,23 @@ export const ENLACES = {
   "safo-de-lesbos": "https://ciudadseva.com/autor/safo/poemas/",
   "li-bai": "https://circulodepoesia.com/2015/03/balada-de-las-estaciones-dossier-de-poesia-china/",
   "du-fu": "https://circulodepoesia.com/2015/03/balada-de-las-estaciones-dossier-de-poesia-china/",
-  "rumi": "https://ciudadseva.com/autor/rumi/",
+  "rumi": "https://www.zendalibros.com/5-poemas-de-rumi/",
   "omar-jayam": "https://circulodepoesia.com/2013/01/poemas-de-omar-khayyam/",
   "dante-alighieri": "https://ciudadseva.com/autor/dante/poemas/",
   "francesco-petrarca": "https://ciudadseva.com/autor/francesco-petrarca/poemas/",
   "matsuo-basho": "https://circulodepoesia.com/2013/03/matsuo-bashou-y-el-origen-del-haiku/",
   "san-juan-de-la-cruz": "https://ciudadseva.com/autor/san-juan-de-la-cruz/poemas/",
-  "sor-juana-ines-de-la-cruz": "https://ciudadseva.com/autor/sor-juana-ines-de-la-cruz/poemas/",
+  "sor-juana-ines-de-la-cruz": "https://www.culturagenial.com/es/poemas-de-sor-juana-ines-de-la-cruz/",
+
+  // --- TANDA 2 ---
+  "garcilaso-de-la-vega": "https://www.zendalibros.com/sonetos-de-garcilaso-de-la-vega/",
+  "luis-de-gongora": "https://www.zendalibros.com/5-poemas-de-gongora/",
+  "francisco-de-quevedo": "https://www.zendalibros.com/5-poemas-quevedo/",
+  "william-shakespeare": "https://www.culturagenial.com/es/poemas-de-william-shakespeare/",
+  "william-blake": "https://www.zendalibros.com/5-poemas-de-william-blake/",
+  "friedrich-holderlin": "https://circulodepoesia.com/2011/05/albala-friedrich-holderlin/",
+  "john-keats": "https://www.zendalibros.com/5-poemas-de-john-keats/",
+  "giacomo-leopardi": "https://www.zendalibros.com/poemas-giacomo-leopardi/",
+  "walt-whitman": "https://www.zendalibros.com/5-poemas-walt-whitman/",
+  "emily-dickinson": "https://www.zendalibros.com/5-poemas-de-emily-dickinson-71-poemas/",
 };
