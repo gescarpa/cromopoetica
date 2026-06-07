@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useMemo, useRef } from "react";
 import { supabase } from "./supabase";
 import { BIOS } from "./biografias";
+import { ENLACES } from "./enlaces";
 
 /* Fase 1: guardado en el navegador (localStorage). En la Fase 3 esto se sustituye por Supabase. */
 if (typeof window !== "undefined" && !window.storage) {
@@ -1130,6 +1131,20 @@ function AuthorScreen({ id, onBack, backLabel = "← Volver a autores" }) {
             <p style={{ fontSize: 16, lineHeight: 1.6, color: "#6b6450", margin: 0 }}>
               Biografía en preparación. Pronto añadiremos la ficha de este autor.
             </p>
+          )}
+
+          {ENLACES[id] && (
+            <a href={ENLACES[id]} target="_blank" rel="noopener noreferrer"
+              style={{
+                display: "inline-flex", alignItems: "center", gap: 11, marginTop: 22,
+                fontFamily: DISP, fontWeight: 700, letterSpacing: ".07em", textTransform: "uppercase",
+                fontSize: 12.5, padding: "12px 18px", border: `1px solid ${INK}`, background: PAPER,
+                color: INK, textDecoration: "none", cursor: "pointer",
+              }}>
+              <span style={{ width: 11, height: 11, background: RED, display: "inline-block" }} />
+              Ver poemas
+              <span style={{ fontFamily: MONO, fontSize: 14 }}>↗</span>
+            </a>
           )}
         </div>
       </div>
