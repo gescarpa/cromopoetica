@@ -1,12 +1,3 @@
-// ===========================================================================
-// ENLACES A POEMAS — Cromopoética
-// Mapa: id (slug) del autor -> URL a una web en español con sus poemas.
-// Crear/actualizar como src/enlaces.js (reemplaza el archivo entero).
-// Fuentes priorizadas por diseño y fiabilidad: Zenda, Círculo de Poesía,
-// Cultura Genial. Ciudad Seva solo donde no hay alternativa limpia mejor.
-// Los autores sin entrada no muestran el botón "Ver poemas".
-// ===========================================================================
-
 export const ENLACES = {
   // --- TANDA 1 ---
   "safo-de-lesbos": "https://ciudadseva.com/autor/safo/poemas/",
@@ -91,4 +82,52 @@ export const ENLACES = {
   "victor-hugo": "https://www.zendalibros.com/plenitud-de-victor-hugo/",
   "gerard-de-nerval": "https://circulodepoesia.com/2016/01/gerard-de-nerval-el-desdichado/",
   "gustavo-adolfo-becquer": "https://www.culturagenial.com/es/rimas-de-gustavo-adolfo-becquer/",
+
+  // --- TANDA 8 ---
+  "paul-verlaine": "https://www.zendalibros.com/5-poemas-de-paul-verlaine/",
+  "paul-valery": "https://materialdelectura.unam.mx/poesia-moderna/16-poesia-moderna-cat/24-003-paul-valery",
+  "guillaume-apollinaire": "https://materialdelectura.unam.mx/poesia-moderna/16-poesia-moderna-cat/233-103-guillaume-apollinaire",
+  "w-b-yeats": "https://www.zendalibros.com/5-poemas-de-he-extendido-mis-suenos-a-tus-pies-de-w-b-yeats/",
+  "ezra-pound": "https://www.zendalibros.com/5-poemas-de-ezra-pound/",
+  "wallace-stevens": "https://www.zendalibros.com/5-poemas-wallace-stevens/",
+  "william-carlos-williams": "https://www.zendalibros.com/los-mejores-poemas-de-william-carlos-williams/",
+  "e-e-cummings": "http://amediavoz.com/cummings.htm",
+  "robert-frost": "https://www.zendalibros.com/5-poemas-de-intervalo-en-la-montana-de-robert-frost/",
+  "giuseppe-ungaretti": "https://poetryalquimia.org/2023/02/10/11-poemas-de-giuseppe-ungaretti/",
+  "eugenio-montale": "https://circulodepoesia.com/2018/11/eugenio-montale-huesos-de-sepia/",
+  "osip-mandelshtam": "https://circulodepoesia.com/2018/09/el-ultimo-poema-de-osip-mandelshtam/",
+  "vladimir-mayakovski": "https://circulodepoesia.com/2020/11/poesia-rusa-vladimir-mayakovski/",
+  "czes-aw-mi-osz": "https://circulodepoesia.com/2018/08/un-poema-de-czeslaw-milosz/",
+  "tomas-transtromer": "https://circulodepoesia.com/2012/06/dos-poemas-de-thomas-transtromer/",
+  "yorgos-seferis": "https://circulodepoesia.com/2018/08/poema-para-leer-un-viernes-por-la-tarde-gymnopedia-de-giorgos-seferis/",
+  "odysseas-elytis": "https://materialdelectura.unam.mx/poesia-moderna/16-poesia-moderna-cat/220-096-odysseas-elytis",
+  "rabindranath-tagore": "https://www.elcopoylarueca.com/rabindranath-tagore-poemas/",
+  "aime-cesaire": "https://circulodepoesia.com/2010/02/cinco-poemas-de-aime-cesaire/",
+  "nazim-hikmet": "https://poetryalquimia.org/2022/01/15/14-poemas-de-nazim-hikmet/",
+  "forough-farrojzad": "https://poetryalquimia.org/2023/12/28/7-poemas-de-forough-farrokhzad-%D9%81%D8%B1%D9%88%D8%BA-%D9%81%D8%B1%D8%AE%D8%B2%D8%A7%D8%AF/",
+  "luis-cernuda": "https://materialdelectura.unam.mx/poesia-moderna/98-039-luis-cernuda",
+
+  // --- TANDA 9 ---
+  "vicente-aleixandre": "https://www.zendalibros.com/5-poemas-de-vicente-aleixandre/",
+  "rafael-alberti": "https://www.zendalibros.com/5-poemas-rafael-alberti/",
+  "miguel-hernandez": "https://www.zendalibros.com/5-poemas-miguel-hernandez/",
+  "jose-marti": "https://www.culturagenial.com/es/jose-marti-poemas/",
+  "delmira-agustini": "https://poetryalquimia.org/2018/10/24/11-poemas-de-delmira-agustini/",
+  "alfonsina-storni": "https://www.culturagenial.com/es/poemas-esenciales-de-alfonsina-storni/",
+  "nicanor-parra": "https://www.zendalibros.com/5-poemas-nicanor-parra/",
+  "juan-gelman": "https://materialdelectura.unam.mx/poesia-moderna/16-poesia-moderna-cat/333-183-juan-gelman",
+  "jose-emilio-pacheco": "https://circulodepoesia.com/2014/01/poemas-de-jose-emilio-pacheco/",
+  "jaime-sabines": "https://trianarts.com/grandes-poetas-jaime-sabines/",
+  "rosario-castellanos": "https://materialdelectura.unam.mx/poesia-moderna/123-053-rosario-castellanos",
+  "nicolas-guillen": "https://cvc.cervantes.es/literatura/escritores/guillen/poemas/default.htm",
+  "carlos-drummond-de-andrade": "https://materialdelectura.unam.mx/poesia-moderna/16-poesia-moderna-cat/107-045-carlos-drummond-de-andrade",
+  "joao-cabral-de-melo-neto": "https://circulodepoesia.com/2020/07/100-anos-de-joao-cabral-de-melo-neto/",
+  "charles-bukowski": "https://poetryalquimia.org/2018/08/16/10-poemas-de-charles-bukowski/",
+  "mary-oliver": "https://poetryalquimia.org/2024/09/10/11-poemas-de-mary-oliver/",
+  "langston-hughes": "https://circulodepoesia.com/2016/09/poesia-norteamericana-langston-hughes/",
+  "elizabeth-bishop": "https://poetryalquimia.org/2022/02/08/11-poemas-de-elizabeth-bishop/",
+  "dylan-thomas": "https://poetryalquimia.org/2017/10/27/poemas-de-dylan-thomas/",
+  "w-h-auden": "https://circulodepoesia.com/2011/06/poetcast-musee-de-beaux-arts-por-w-h-auden/",
+  "anne-carson": "https://poetryalquimia.org/2021/06/21/8-poemas-de-anne-carson/",
+  "jose-angel-valente": "https://poesiamaspoesia.com/224-poesia-mas-poesia-jose-angel-valente/",
 };
