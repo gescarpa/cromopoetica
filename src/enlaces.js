@@ -79,4 +79,16 @@ export const ENLACES = {
   "kabir": "http://amediavoz.com/kabir.htm",
   "mirabai": "https://institutodeindologia.es/index.php/articulos/literatura/558-poemas-mirabai",
   "jorge-manrique": "http://amediavoz.com/manrique.htm",
+
+  // --- TANDA 7 ---
+  "fray-luis-de-leon": "https://www.espoesia.com/poesia/fray-luis-de-leon-2/",
+  "santa-teresa-de-jesus": "https://teresavila.com/poesias/",
+  "john-donne": "http://amediavoz.com/donne.htm",
+  "john-milton": "https://poetryalquimia.org/2024/12/09/7-poemas-de-john-milton/",
+  "johann-wolfgang-von-goethe": "https://www.zendalibros.com/5-poemas-goethe/",
+  "novalis": "https://trianarts.com/novalis-el-hombre-de-la-flor-azul/",
+  "heinrich-heine": "https://www.zendalibros.com/5-poemas-de-heinrich-heine/",
+  "victor-hugo": "https://www.zendalibros.com/plenitud-de-victor-hugo/",
+  "gerard-de-nerval": "https://circulodepoesia.com/2016/01/gerard-de-nerval-el-desdichado/",
+  "gustavo-adolfo-becquer": "https://www.culturagenial.com/es/rimas-de-gustavo-adolfo-becquer/",
 };
